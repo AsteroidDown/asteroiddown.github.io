@@ -79,16 +79,24 @@
 <!-- ---------- Personal Profile ---------- -->
 <div class = "prof container-fluid" id="prof">
   <div class = prof-container>
-    <h2>Personal Profile</h2>
-
     <!-- Left Section -->
     <div class = "prof-left">
+      <h2>Personal Profile</h2>
       This is a work in progress.
+      <p id="demo">Demo Text</p>
     </div>
 
     <!-- Right Section -->
-    <div class = "prof-right">
-      <h3><i class="fas fa-code"></i>  Coding Skills</h3>
+    <div class = "prof-right" id = "prof-accordian">
+      <h3><i class="fas fa-code"></i>
+        Coding Skills
+
+      <!-- Coding Accordian Button -->
+      <a href = "javascript:void(0);" class = "skill-toggler" onclick = "profAccordian();">
+        <i class="fas fa-plus"></i>
+      </a></h3>
+
+      <!-- Skills -->
       <div class = "skill">
         <div class = "skill-name">Python</div>
         <div class = skill-bar>
@@ -131,7 +139,6 @@
       </div>
     </div>
 
-    <p id="demo">Demo Text</p>
   </div>
 </div>
 

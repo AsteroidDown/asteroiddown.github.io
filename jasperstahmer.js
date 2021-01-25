@@ -18,6 +18,16 @@ function collapseAndJump(pos) {
 	smoothScroll(pos);
 }
 
+// ---------- Coding Accordian ---------- //
+function profAccordian() {
+  var x = document.getElementById("prof-accordian");
+  if (x.className === "prof-right") {
+    x.className += " accordian";
+  } else {
+    x.className = "prof-right";
+  }
+}
+
 // ---------- Scroll Functions ---------- //
 window.onscroll = function() {nameDisappear()};
 

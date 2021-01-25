@@ -25,6 +25,10 @@
 	max-width: 20em;
 }
 
+.skill-toggler {
+	display: none;
+}
+
 .skill {
 	display: block;
 	background: var(--global2);
@@ -79,3 +83,20 @@
 .skill-fill:hover, .skill-fill:focus, .skill-fill:active {
 	width: 15%;
 }
+
+
+/* ---------- Small Screen Adjustments ---------- */
+@media screen and (max-width: 850px) {
+	.prof-left {width: 100%;}
+	.prof-right {width: 100%; max-width: 100%; height: 45px;}
+	.prof-right.accordian {height: 100%; transition: height 0.2s ease-in;}
+	.skill-toggler, .skill-toggler a {
+		display: inline;
+		float: right;
+		position: absolute
+		color: #FFFFFF;
+		transition: transform 0.2s ease-in;
+	}
+	.skill-toggler.accordian {transform: rotate(-45deg)}
+}
+

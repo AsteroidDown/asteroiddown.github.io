@@ -78,7 +78,6 @@
 
 /* ---------- Small Screen Adjustments ---------- */
 @media screen and (max-width: 850px) {
-	/* ---------- Navbar ---------- */
 	.nav a.nav-toggler {float: right; display: block;}
 	.nav-left {width: 100%;}
 	.nav-right {width: 100%; text-align: left; display: none; position: initial;}
