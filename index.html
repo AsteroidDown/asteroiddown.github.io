@@ -1,7 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <title>Jasper Stahmer</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <link rel="icon" href="logo.png">
+  <link rel="stylesheet" href="jasperstahmer.css">
+  <script src = "jasperstahmerjs.js"></script>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+<!-- ---------- Header ---------- -->
+<div class="container-fluid">
+
+  <!-- Name -->
+  <h1>Jasper Stahmer</h1>
+
+  <!-- Icons -->
+  <div class = "icons">
+    <a href = "https://www.linkedin.com/in/jasperstahmer" target = "_blank">
+      <i class="fab fa-linkedin"></i></a>
+    <a href = "https://www.facebook.com/jasper.stahmer" target = "_blank">
+      <i class="fab fa-facebook-square"></i></a>
+    <a href = "https://github.com/AsteroidDown" target = "_blank">
+      <i class="fab fa-github-square"></i></a>
+    <a href = "mailto: jasper@stahmer.ca">
+      <i class = 'fas fa-envelope-square'></i></a>
+    <a href = "tel:6475746240">
+      <i class = 'fas fa-phone-square'></i></a>
+  </div>
+</div>
+
+  
+<!-- ---------- NAVBAR ---------- -->
+<div class = "nav">
+
+  <div class = "nav-container">
+    <div class = "nav-left">
+      <!-- Brand Name -->
+      <div class = "nav-name-hide" id = "navName">
+        <a href = "javascript:void(0);" onclick = "collapseAndJump(172);">Jasper Stahmer</a>
+      </div>
+
+      <!-- Collapse Button -->
+      <a href = "javascript:void(0);" class = "nav-toggler" onclick = "navAccordian();">
+        <i class = "fa fa-bars"></i>
+      </a>
+    </div>
+
+    <!-- Links --> 
+    <div class = "nav-right" id = "nav-right">
+      <a href = "javascript:void(0);" onclick = "collapseAndJump(674);">Work Experience</a>
+      <a href = "#edu"     onclick = "navCollapse();">Education</a>
+      <a href = "#game"    onclick = "navCollapse();">My Game</a>
+      <a href = "#contact" onclick = "navCollapse();">Contact</a>
+    </div>
+  </div>
+</div> 
+
+<!-- ---------- Personal Profile ---------- -->
+<div class = "prof container-fluid" id="prof">
+  <h2>Personal Profile</h2>
+
+  <p id="demo">ABD</p>
+</div>
+
+
+<!-- ---------- Work Experience ---------- -->
+<div class = "work container-fluid" id="work">
+  <h2>Work Experience</h2>
+
+</div>
+
+<!-- ---------- Education ---------- -->
+<div class = "edu container-fluid" id="edu">
+  <h2>Education</h2>
+
+</div>
+
+<!-- ---------- Game ---------- -->
+<div class = "game container-fluid" id="game">
+  <h2>I'm in the Band</h2>
+
+</div>
+
+<!-- ---------- Contact ---------- -->
+<div class = "contact container-fluid" id="contact">
+  <h2>Contact Information</h2>
+
+</div>
+
+
+<!-- ---------- Footer ---------- -->
+<div class = "footer container-fluid">
+  <div class = "icons">
+    <a href = "https://www.linkedin.com/in/jasperstahmer" target = "_blank">
+      <i class="fab fa-linkedin"></i></a>
+    <a href = "https://www.facebook.com/jasper.stahmer" target = "_blank">
+      <i class="fab fa-facebook-square"></i></a>
+    <a href = "https://github.com/AsteroidDown" target = "_blank">
+      <i class="fab fa-github-square"></i></a>
+    <a href = "mailto: jasper@stahmer.ca">
+      <i class = 'fa fa-envelope-square'></i></a>
+    <a href = "tel:6475746240">
+      <i class = 'fa fa-phone-square'></i></a>
+  </div>
+</div>
+
 </body>
 </html>
