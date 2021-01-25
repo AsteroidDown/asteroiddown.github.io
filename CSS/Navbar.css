@@ -1,38 +1,5 @@
-
-body {
-  	background-color: #363636;
-}
-
-/* ---------- Text Styling ---------- */
-h1 {
-	color: #FE7701;
-	text-align: center;
-	font-size: 48px;
-	padding: 18px 0px 12px 0px;
-}
-
-h2 {
-	color: #15cf00;/*#cf06b0; #eb2f87; */
-}
-
-
-/* ---------- Icons ---------- */
-.icons {
-	text-align: center;
-	font-size: 36px;
-	padding: 12px 24px 12px;
-}
-
-.icons a {color: #525252; padding: 0px 12px;}
-.fa-facebook-square:hover {color: #352FE2}
-.fa-linkedin:hover {color: #0077B5}
-.fa-envelope-square:hover {color: #FE2727}
-.fa-phone-square:hover {color: #3CFE27}
-.fa-github-square:hover {color: #9933ff}
-
 /* ---------- Navbar ---------- */
 .nav {
-	background-color: #525252;
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
@@ -90,64 +57,6 @@ h2 {
 }
 .nav-right a {
 	pointer-events: all;
-}
-.nav-right a:hover, .nav a.nav-toggler:hover {
-	background: #696969;
-}
-
-
-
-/* ---------- Personal Profile ---------- */
-.prof {
-	width: 100%;
-	height: 500px;
-	background: #808080;
-}
-
-
-/* ---------- Work Experience ---------- */
-.work {
-	width: 100%;
-	height: 500px;
-	background: #707070;
-}
-
-
-/* ---------- Education ---------- */
-.edu {
-	width: 100%;
-	height: 500px;
-	background: #808080;
-}
-
-
-/* ---------- Game ---------- */
-.game {
-	width: 100%;
-	height: 500px;
-	background: #707070;
-}
-
-
-/* ---------- Contact ---------- */
-.contact {
-	width: 100%;
-	height: 500px;
-	background: #808080;
-}
-
-
-/* ---------- Footer ---------- */
-.footer {
-	/*position: absolute;*/
-	bottom: 0;
-	width: 100%;
-	text-align: center;
-	background: #565656;
-}
-
-.footer i {
-	color: #363636;
 }
 
 
