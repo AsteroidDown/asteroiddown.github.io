@@ -21,26 +21,31 @@
 	float: right;
 }
 
-/*.skill {
-	display: block;
-}*/
-.skill-name {
-	position: relative;
+.skill {
+	/*display: block;*/
+	background: #FFFFFF;
+	margin: 3px;
 	width: 100%;
+	height: 21px;
+	border-radius: 10px;
+}
+.skill-name {
+	width: 40%;
+	margin-right: 10px;
 	float: left;
+}
+
+.skill-back {
+	float: right;
+	width: 50%;
+	float: right;
+	margin-top: 3px;
+	margin-right: 3px;
+	background: #ababab;
 }
 .skill-back, .skill-fill-area, .skill-fill {
 	border-radius: 10px;
 	height: 15px;
-}
-.skill-back {
-	//position: absolute;
-	float: right;
-	width: 40%;
-	float: right;
-	margin-top: 5px;
-	margin-right: 10px;
-	background: #ababab;
 }
 .skill-fill-area#Python {
 	width: 90%;
