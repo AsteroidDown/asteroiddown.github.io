@@ -13,19 +13,20 @@
 }
 
 .prof-left {
-	width: 70%;
+	width: 60%;
 	float: left;
 }
 .prof-right {
-	width: 30%;
+	width: 40%;
 	float: right;
 }
 
-.skill {
+/*.skill {
 	display: block;
-}
+}*/
 .skill-name {
-	width: 40%;
+	position: relative;
+	width: 100%;
 	float: left;
 }
 .skill-back, .skill-fill-area, .skill-fill {
@@ -33,24 +34,25 @@
 	height: 15px;
 }
 .skill-back {
+	//position: absolute;
+	float: right;
 	width: 40%;
 	float: right;
 	margin-top: 5px;
 	margin-right: 10px;
 	background: #ababab;
 }
-.skill-fill-area {
+.skill-fill-area#Python {
 	width: 90%;
+}
+.skill-fill-area#C {
+	width: 80%;
 }
 .skill-fill {
 	background: #FE7701;
 	width: 100%;
+	transition: width 500ms ease-in;
 }
-.skill-fill:hover {
-	animation: fill 1s ease-in 1;
-}
-@keyframes fill {
-	0%   {width: 100%;}
-	50%  {width: 0%;}
-	100% {width: 100%;}
+.skill-fill:hover, .skill-fill:focus, .skill-fill:active {
+	width: 10%;
 }
