@@ -1,0 +1,182 @@
+
+body {
+  	background-color: #363636;
+}
+
+/* ---------- Text Styling ---------- */
+h1 {
+	color: #FE7701;
+	text-align: center;
+	font-size: 48px;
+	padding: 18px 0px 12px 0px;
+}
+
+h2 {
+	color: #15cf00;/*#cf06b0; #eb2f87; */
+}
+
+
+/* ---------- Icons ---------- */
+.icons {
+	text-align: center;
+	font-size: 36px;
+	padding: 12px 24px 12px;
+}
+
+.icons a {color: #525252; padding: 0px 12px;}
+.fa-facebook-square:hover {color: #352FE2}
+.fa-linkedin:hover {color: #0077B5}
+.fa-envelope-square:hover {color: #FE2727}
+.fa-phone-square:hover {color: #3CFE27}
+.fa-github-square:hover {color: #9933ff}
+
+/* ---------- Navbar ---------- */
+.nav {
+	background-color: #525252;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	width: 100%;
+	overflow: hidden;
+	z-index: 1;
+}
+.nav-container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.nav-name-hide {
+	/*animation: name-show 0.5s reverse;*/
+	opacity: 0;
+	/*pointer-events: none;*/
+}
+.nav-name-show {
+	animation: name-show 0.5s;
+	opacity: 1;
+}
+@keyframes name-show {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
+.nav-left {
+	width: 100%;
+}
+.nav-right {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	clear: both;
+	text-align: center;
+	pointer-events:none;
+}
+
+.nav a {
+	display: inline-block;
+	padding: 12px 15px;
+	text-decoration: none;
+	font-size: 18px;
+	color: #2151ff;
+}
+.nav a.nav-toggler {
+	display: none;
+}
+.nav-left a {
+	float: left;
+	color: #FE7701;
+	font-size: 18px;
+	font-weight: bold;
+}
+.nav-right a {
+	pointer-events: all;
+}
+.nav-right a:hover, .nav a.nav-toggler:hover {
+	background: #696969;
+}
+
+
+
+/* ---------- Personal Profile ---------- */
+.prof {
+	width: 100%;
+	height: 500px;
+	background: #808080;
+}
+
+
+/* ---------- Work Experience ---------- */
+.work {
+	width: 100%;
+	height: 500px;
+	background: #707070;
+}
+
+
+/* ---------- Education ---------- */
+.edu {
+	width: 100%;
+	height: 500px;
+	background: #808080;
+}
+
+
+/* ---------- Game ---------- */
+.game {
+	width: 100%;
+	height: 500px;
+	background: #707070;
+}
+
+
+/* ---------- Contact ---------- */
+.contact {
+	width: 100%;
+	height: 500px;
+	background: #808080;
+}
+
+
+/* ---------- Footer ---------- */
+.footer {
+	/*position: absolute;*/
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	background: #565656;
+}
+
+.footer i {
+	color: #363636;
+}
+
+
+/* ---------- Small Screen Adjustments ---------- */
+@media screen and (max-width: 850px) {
+	/* ---------- Navbar ---------- */
+	.nav a.nav-toggler {float: right; display: block;}
+	.nav-left {width: 100%;}
+	.nav-right {width: 100%; text-align: left; display: none; position: initial;}
+	.nav-right.open {animation: nav-accordian 0.5s; display: block;}
+	.nav-right.closed {animation: nav-accordian-rev 0.5s;}
+	.nav-right a {width: 100%;}
+	@keyframes nav-accordian {
+		from {height: 0;}
+		to {height: 200px;}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
