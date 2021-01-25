@@ -1,12 +1,14 @@
 :root {
-	--dark1: #1c1c1c;
-	--dark2: #363636;
-	--dark3: #525252;
-	--dark4: #696969;
+	--global1: #1c1c1c;
+	--global2: #363636;
+	--global3: #525252;
+	--global4: #696969;
+	--global5: #808080;
 }
 
 body {
-  	background-color: var(--dark1);
+  	background-color: var(--global1);
+  	color: #F0F0F0;
 }
 
 /* ---------- Text Styling ---------- */
@@ -21,21 +23,21 @@ h2 {
 	color: #15cf00;
 }
 
+h3 {
+	padding: 0.1em 0.5em;
+}
+
 .icons a {
-	color: var(--dark3);
+	color: var(--global3);
 }
 
 /* ---------- Section Colouring --------- */
-.nav {
-	background: var(--dark2);
-}
-.nav-right a:hover, .nav a.nav-toggler:hover {
-	background: var(--dark3);
-}
+.nav {background: var(--global2);}
+.nav-right a:hover, .nav a.nav-toggler:hover {background: var(--global3);}
 
-.footer {
-	background: var(--dark1)
-}
+.prof-container {background: var(--global5);}
+
+.footer {background: var(--global1);}
 
 
 
