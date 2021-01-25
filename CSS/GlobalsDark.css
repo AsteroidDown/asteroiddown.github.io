@@ -1,12 +1,12 @@
 :root {
-  --dark1: #363636;
-  --dark2: #525252;
-  --dark3: #525252;
-  --dark4: #696969;
+	--dark1: #1c1c1c;
+	--dark2: #363636;
+	--dark3: #525252;
+	--dark4: #696969;
 }
 
 body {
-  	background-color: var(--dark1, black);
+  	background-color: var(--dark1);
 }
 
 /* ---------- Text Styling ---------- */
@@ -22,15 +22,19 @@ h2 {
 }
 
 .icons a {
-	color: var(--dark2);
+	color: var(--dark3);
 }
 
 /* ---------- Section Colouring --------- */
-.navbar {
-	background-color: var(--dark3);
+.nav {
+	background: var(--dark2);
 }
 .nav-right a:hover, .nav a.nav-toggler:hover {
-	background: var(--dark4);
+	background: var(--dark3);
+}
+
+.footer {
+	background: var(--dark1)
 }
 
 
