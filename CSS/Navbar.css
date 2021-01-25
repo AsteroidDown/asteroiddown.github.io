@@ -51,9 +51,20 @@
 }
 .nav-left a {
 	float: left;
-	color: #FE7701;
 	font-size: 18px;
 	font-weight: bold;
+	/* Hover background change*/
+	overflow: hidden;
+	background: linear-gradient(to right, #e31769 50%, #FE7701 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+  	background-position: 100%;
+  	transition: background-position 275ms ease;
+}
+.nav-left a:hover {
+  	background-position: 0 100%;
 }
 .nav-right a {
 	pointer-events: all;
