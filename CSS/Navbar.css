@@ -53,6 +53,12 @@
 	float: left;
 	font-size: 18px;
 	font-weight: bold;
+	color: #FE7701;
+}
+.nav-left a#nav-name {
+	float: left;
+	font-size: 18px;
+	font-weight: bold;
 	/* Hover background change*/
 	overflow: hidden;
 	background: linear-gradient(to right, #e31769 50%, #FE7701 50%);
@@ -63,7 +69,7 @@
   	background-position: 100%;
   	transition: background-position 275ms ease;
 }
-.nav-left a:hover {
+.nav-left a#nav-name:hover {
   	background-position: 0 100%;
 }
 .nav-right a {
