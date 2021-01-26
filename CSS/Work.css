@@ -21,6 +21,10 @@
 
 /* Style the buttons inside the tab */
 .work-tab button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	
 	background-color: var(--global2);
 	padding: 14px 16px;
 	width: 25%;
