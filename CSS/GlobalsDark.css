@@ -21,6 +21,14 @@ body {
   	color: var(--bodycolor);
 }
 
+/* Used as a break between sections */
+.break {
+	border: 1px solid var(--global2);
+	border-radius: 10px;
+	width: auto;
+	margin: 1em 1.5em;
+}
+
 /* ---------- Text Styling ---------- */
 h1 {
 	color: #000000;/*#FE7701;*/
@@ -50,7 +58,7 @@ p {
 }
 
 .icons a {
-	color: var(--global2);
+	color: var(--global1);
 }
 
 

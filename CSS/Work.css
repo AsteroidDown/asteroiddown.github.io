@@ -4,10 +4,7 @@
 }
 
 .work-container {
-	background: var(--global4);
 	position: relative;
-	margin: 0.3em 0em;
-	padding: 0.5em;
 	border-radius: 10px;
 	overflow: hidden;
 }
@@ -17,6 +14,8 @@
 	overflow: hidden;
 	background-color: var(--global2);
 	border-radius: 10px 10px 0px 0px;
+	border: 1px solid var(--global3);
+	border-bottom: none;
 }
 
 /* Style the buttons inside the tab */
@@ -47,7 +46,8 @@
 
 /* Style the tab content */
 .work-tabcontent {
-	background: var(--global3);
+	border: 1px solid var(--global3);
+	border-top: none;
 	display: none;
 	padding: 6px 12px;
 	border-radius: 0px 0px 10px 10px;	
@@ -59,7 +59,7 @@
 }
 
 .work-ref {
-	background-color: var(--global2);
+	/*background-color: var(--global2);*/
 	margin-top: 0.5em;
 	width: 100%;
 	overflow: hidden;
