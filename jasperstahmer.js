@@ -1,17 +1,6 @@
 // ---------- Accordians ---------- //
-function navAccordian() {
-  var panel = document.getElementById("nav-links");
-
-  if (panel.style.maxHeight) {
-    panel.style.maxHeight = null;
-  } else {
-    panel.style.maxHeight = panel.scrollHeight + "px";
-  }
-}
-
-function skillsAccordian() {
-  var acc = document.getElementById("acc-skill");
-  var panel = acc.nextElementSibling;
+function accordian(name) {
+  var panel = document.getElementById(name);
 
   if (panel.style.maxHeight) {
     panel.style.maxHeight = null;
@@ -22,7 +11,7 @@ function skillsAccordian() {
 
 
 // ---------- Tabs ---------- //
-function openTab(evt, cityName) {
+function openTab(evt, tabName) {
   var i, tabcontent, tablinks;
 
   tabcontent = document.getElementsByClassName("work-tabcontent");
@@ -35,7 +24,7 @@ function openTab(evt, cityName) {
     tablinks[i].className = tablinks[i].className.replace(" selected", "");
   }
 
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(tabName).style.display = "block";
   evt.currentTarget.className += " selected";
 }
 
