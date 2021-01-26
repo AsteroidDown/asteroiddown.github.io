@@ -1,4 +1,6 @@
 /* ---------- Personal Profile ---------- */
+.submit { -webkit-appearance: none; }
+
 .prof {
 	width: 100%;
 }

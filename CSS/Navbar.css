@@ -1,4 +1,6 @@
 /* ---------- Navbar ---------- */
+.submit { -webkit-appearance: none; }
+
 .nav {
 	position: -webkit-sticky;
 	position: sticky;
