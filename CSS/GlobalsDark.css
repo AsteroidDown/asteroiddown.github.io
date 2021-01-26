@@ -6,6 +6,12 @@
 	--global5: #808080;
 }
 
+button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
 body {
   	background-color: var(--global1);
   	color: #F0F0F0;

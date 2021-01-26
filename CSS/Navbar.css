@@ -1,9 +1,4 @@
 /* ---------- Navbar ---------- */
-input {
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
-}
 
 .nav {
 	position: -webkit-sticky;
