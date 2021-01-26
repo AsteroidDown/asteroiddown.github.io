@@ -8,7 +8,7 @@
 	width: 100%;
 	overflow: hidden;
 	z-index: 1;
-	border-radius: 0px 0px 5px 5px;
+	border-bottom: 1px solid var(--global2);
 }
 .nav-container {
 	width: 100%;
