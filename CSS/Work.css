@@ -43,7 +43,7 @@
 
 /* Create an active/current tablink class */
 /* Change background color of buttons on hover */
-.work-tab button:hover, .work-tab button.active {
+.work-tab button:hover, button.selected {
 	background-color: var(--global3);
 	color: var(--global1);
 }
