@@ -39,8 +39,11 @@ function smoothScroll(pos) {
 }
 
 function collapseAndJump(pos) {
-  navCollapse();
+  var panel = document.getElementById("nav-links");
+  panel.style.transitionDuration = "0s";
+  panel.style.maxHeight = null;
   smoothScroll(pos);
+  panel.style.transitionDuration = "0.25s";
 }
 
 //document.getElementById("demo").innerHTML = x.className;
