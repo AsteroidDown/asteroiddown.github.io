@@ -28,6 +28,21 @@ function profAccordian() {
   }
 }
 
+// ---------- Accordians ---------- //
+function accordian() {
+  var acc = document.getElementById("acc-skill");
+  // var tog = document.getElementById("tog-skill");
+
+  // acc.classList.toggle("on");
+  var panel = acc.nextElementSibling;
+
+  if (panel.style.maxHeight) {
+    panel.style.maxHeight = null;
+  } else {
+    panel.style.maxHeight = panel.scrollHeight + "px";
+  }
+}
+
 // ---------- Scroll Functions ---------- //
 window.onscroll = function() {nameDisappear()};
 

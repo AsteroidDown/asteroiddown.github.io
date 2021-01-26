@@ -5,8 +5,8 @@
 
 .prof-container {
 	position: relative;
-	margin: 10px 0px;
-	padding: 5px;
+	margin: 0.3em 0em;
+	padding: 0.5em;
 	border-radius: 10px;
 	overflow: hidden;
 }
@@ -19,40 +19,58 @@
 	background: var(--global3);
 	width: 40%;
 	float: right;
-	padding: 0.2em;
-	padding-right: 1em;
 	border-radius: 10px;
 	max-width: 20em;
 }
+.prof-right button {
+	padding-top: 0.3em;
+	background: rgba(0, 0, 0, 0);
+	pointer-events: none;
+}
 
-.skill-toggler {
+.skill-left {
+	width: auto;
+}
+.skill-right {
+	padding-right: 0.5em;
 	display: none;
 }
 
+.accordian-panel {
+	max-height: 500px;
+}
+
 .skill {
-	display: block;
 	background: var(--global2);
-	margin: 0.5em;
-	width: 100%;
+	margin: 0.2em 0.5em;
+	width: auto;
 	border-radius: 15px;
 	overflow: hidden;
 }
 .skill-name {
+	margin-left: 0.7em;
+	margin-bottom: 0.2em;
 	width: 35%;
 	float: left;
 	text-align: left;
-	margin: 0.2em;
-	margin-left: 0.8em;
 }
-
 .skill-bar {
+	margin-top: 0.225em;
+	margin-right: 0.3em;
+	max-height: 1.2em;
 	float: right;
 	width: 50%;
-	margin-top: 0.3em;
-	margin-right: 0.3em;
-	padding-bottom: 1.1em;
 	background: #ababab;
-	/*border: 0.2em solid var(--global1)*/
+}
+.skill-fill {
+	background: #FE7701;
+	max-height: 1.2em;
+	width: 100%;
+	height: 100%;
+	transition: width 500ms ease-in;
+}
+.skill-fill:hover, .skill-fill:focus, .skill-fill:active {
+	width: 15%;
 }
 .skill-bar, .skill-fill-area, .skill-fill {
 	border-radius: 15px;
@@ -73,30 +91,16 @@
 .skill-fill-area#SQL {
 	width: 50%;
 }
-.skill-fill {
-	background: #FE7701;
-	width: 100%;
-	height: 100%;
-	transition: width 500ms ease-in;
-	/*border: 0.2em solid #e86c00;*/
-}
-.skill-fill:hover, .skill-fill:focus, .skill-fill:active {
-	width: 15%;
-}
 
 
 /* ---------- Small Screen Adjustments ---------- */
 @media screen and (max-width: 850px) {
 	.prof-left {width: 100%;}
-	.prof-right {width: 100%; max-width: 100%; height: 45px;}
-	.prof-right.accordian {height: 100%; transition: height 0.2s ease-in;}
-	.skill-toggler, .skill-toggler a {
-		display: inline;
-		float: right;
-		position: absolute
-		color: #FFFFFF;
-		transition: transform 0.2s ease-in;
-	}
-	.skill-toggler.accordian {transform: rotate(-45deg)}
+	.prof-right {width: 100%; max-width: 100%;}
+	.prof-right button {pointer-events: all;}
+	.accordian-panel {max-height: 0px;}
+	/*.skill-left {width: 80%; float: left;}*/
+	.skill-right {display: static}
+	/*.skill-right {width: 20%; float: right; text-align: right; display: static}*/
 }
 

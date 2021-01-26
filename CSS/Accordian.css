@@ -1,0 +1,19 @@
+.accordion {
+  cursor: pointer;
+  margin-top: 0.5em;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  color: var(--global5);
+}
+
+.accordian-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
