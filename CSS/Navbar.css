@@ -1,7 +1,7 @@
 /* ---------- Navbar ---------- */
 
 .nav {
-	background: var(--global2);
+	background: var(--global1);
 	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
@@ -54,7 +54,7 @@
 	float: left;
 	font-size: 18px;
 	font-weight: bold;
-	color: #FE7701;
+	color: var(--orange);
 }
 
 /* Hover background change*/
@@ -76,7 +76,7 @@
 	pointer-events: all;
 }
 .nav-right a:hover {
-	background: var(--global3);
+	background: var(--global2);
 }
 
 

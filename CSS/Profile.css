@@ -5,7 +5,7 @@
 }
 
 .prof-container {
-	background: var(--global5);
+	background: var(--global3);
 	position: relative;
 	margin: 0.3em 0em;
 	padding: 0.5em;
@@ -18,7 +18,7 @@
 	float: left;
 }
 .prof-right {
-	background: var(--global3);
+	background: var(--global2);
 	width: 40%;
 	float: right;
 	border-radius: 10px;
@@ -43,8 +43,8 @@
 }
 
 .skill {
-	background: var(--global2);
-	margin: 0.2em 0.5em;
+	background: var(--global3);
+	margin: 0.5em 0.5em;
 	width: auto;
 	border-radius: 15px;
 	overflow: hidden;
@@ -52,7 +52,7 @@
 .skill-name {
 	margin-left: 0.7em;
 	margin-bottom: 0.2em;
-	width: 35%;
+	width: auto;
 	float: left;
 	text-align: left;
 }
@@ -61,7 +61,7 @@
 	margin-right: 0.3em;
 	max-height: 1.2em;
 	float: right;
-	width: 50%;
+	width: 60%;
 	background: #ababab;
 }
 .skill-fill {
