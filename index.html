@@ -62,13 +62,13 @@
       </div>
 
       <!-- Collapse Button -->
-      <a href = "javascript:void(0);" class = "nav-toggler" onclick = "navAccordian();">
+      <button class = "accordian nav-toggler" id = "acc-nav" onclick = "navAccordian();">
         <i class = "fa fa-bars"></i>
-      </a>
+      </button>
     </div>
 
     <!-- Links --> 
-    <div class = "nav-right" id = "nav-right">
+    <div class = "nav-right" id = "nav-links">
       <a href = "javascript:void(0);" onclick = "collapseAndJump(674);">Work Experience</a>
       <a href = "#edu"     onclick = "navCollapse();">Education</a>
       <a href = "#game"    onclick = "navCollapse();">My Game</a>
@@ -90,7 +90,7 @@
 
     <!-- Right Section -->
     <div class = "prof-right">
-      <button class="accordion" id = "acc-skill" onclick="accordian();">
+      <button class="accordion" id = "acc-skill" onclick="skillsAccordian();">
         <div class = "skill-left">
           <h3>
             <i class="fas fa-code"></i>
@@ -103,7 +103,7 @@
       </button>
 
       <!-- Skills -->
-      <div class="accordian-panel">
+      <div class = "accordian-panel">
         <div class = "skill">
           <div class = "skill-name">Python</div>
           <div class = skill-bar>
