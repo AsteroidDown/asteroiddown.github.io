@@ -1,11 +1,17 @@
 // ---------- Accordians ---------- //
 function accordian(name) {
   var panel = document.getElementById(name);
+  var extra = 0;
+
+  // Extra scroll height for references box
+  if (name === 'acc-ref') {
+    extra = 100;
+  }
 
   if (panel.style.maxHeight) {
     panel.style.maxHeight = null;
   } else {
-    panel.style.maxHeight = panel.scrollHeight + "px";
+    panel.style.maxHeight = panel.scrollHeight + extra + "px";
   }
 }
 

@@ -33,9 +33,6 @@
 	font-weight: bold;
 	color: var(--bodycolor);
 	border: none;
-	/*border-left: solid 1px var(--global2);
-	border-right: solid 1px var(--global2);
-	border-bottom: solid 1px var(--global2);*/
 	outline: none;
 	cursor: pointer;
 	transition: 0.3s;
@@ -71,7 +68,9 @@
 
 .work-ref-button {
 	background: rgba(0,0,0,0);
-	padding: 0.5em 1em 0em 1em;
+	display: block;
+	margin: 0.3em 0.3em 0em;
+	top: 50%;
 	border: none;
 	width: 100%;
 	text-align: left;
@@ -79,34 +78,41 @@
 }
 
 .work-ref-container {
-	margin: 0em 0.3em;
 	display: grid;
 	grid-template-columns: auto auto auto;
-   	max-height: 500px;
-   	transition: max-height 0.4s ease;
+   	transition: max-height 0.4s ease-out;
 }
 
 .work-ref-col {
-	background: var(--global3);
-	margin: 0em 0.2em 0.4em 0.2em;
-	padding: 0em;
+	background: var(--global4);
+	margin: 0em 0.4em 0.4em;
 	display: inline-block;
 	border-radius: 10px;
 	overflow: hidden;
 }
 
-.work-ref-col p {
+/* Style reference content */
+.work-ref-content{
 	font-style: italic;
 	text-align: center;
-	/*font-family: Times;*/
+	/*font-family: "Bookman Old Style";*/
 }
-.work-ref-col p:before, .work-ref-col p:after {
+/* Add quotes before and after reference content */
+.work-ref-content:before, .work-ref-content:after {
 	content: '"';
+}
+.work-ref-person {
+	background: var(--global3);
+	width: 100%;
+	padding: 0.2em 1em;
+}
+.work-ref-person p {
+	text-align: right;
 }
 
 
 @media screen and (max-width: 850px) {
-	.work-tab button {width: 100%}
+	.work-tab button {width: 100%; border-bottom: 1px solid var(--global2)}
 	.work-ref-button {pointer-events: all;}
 	.work-ref-container {grid-template-columns: auto; max-height: 0px;}
 }
