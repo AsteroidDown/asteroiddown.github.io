@@ -26,7 +26,7 @@ window.onscroll = function() {nameDisappear()};
 
 function nameDisappear() {
   var x = document.getElementById("nav-name");
-  if (document.body.scrollTop > 75 || document.documentElement.scrollTop > 75) {
+  if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
     x.className = "nav-name-show";
   } else {
     x.className = "nav-name-hide";
