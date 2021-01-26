@@ -7,6 +7,7 @@
 	--global6: #999999;
 	--bodycolor: #F0F0F0;
 	--orange: #FE7701;
+	--blue: #1b1bd1;
 }
 
 button {
@@ -29,12 +30,12 @@ h1 {
 }
 
 h2 {
-	color: #4015c2;
+	color: var(--blue);
 	padding: 0em 0.25em; 
 }
 
 h3 {
-	color: #00ff1a;
+	color: var(--orange);
 	padding-left: 0.25em;
 }
 

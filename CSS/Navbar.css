@@ -45,7 +45,7 @@
 	padding: 12px 15px;
 	text-decoration: none;
 	font-size: 18px;
-	color: #2151ff;
+	color: var(--blue);
 }
 .nav button.nav-toggler {
 	display: none;
@@ -74,21 +74,24 @@
 
 .nav-right a {
 	pointer-events: all;
+	transition: background 0.2s ease, color 0.2s ease
 }
 .nav-right a:hover {
-	background: var(--global2);
+	background: var(--orange);
+	color: var(--global1);
 }
 
 
 /* ---------- Small Screen Adjustments ---------- */
 @media screen and (max-width: 850px) {
 	.nav button.nav-toggler {
+		background: rgba(0,0,0,0);
+		top: 50%;
 		float: right; 
 		display: block; 
-		background: rgba(0,0,0,0);
 		border: none;
 		font-size: 24px;
-		color: #FE7701;
+		color: var(--orange);
 		margin-top: 0.2em;
 		margin-right: 0.5em;
 		transition: color 300ms ease;
