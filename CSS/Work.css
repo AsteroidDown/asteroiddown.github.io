@@ -21,7 +21,7 @@
 
 /* Style the buttons inside the tab */
 .work-tab button {
-	background-color: inherit;
+	background-color: var(--global2);
 	padding: 14px 16px;
 	width: 25%;
 	float: left;
