@@ -1,5 +1,24 @@
 /* ---------- Education ---------- */
 .edu {
 	width: 100%;
-	height: 500px;
+}
+
+.edu-container {
+	position: relative;
+	overflow: hidden;
+}
+
+.edu-left {
+	float: left;
+	width: 70%;
+}
+
+.edu-right {
+	float: right;
+	width: 30%;
+}
+.edu-right img {
+	float: right;
+	width: auto;
+	max-width: 60%;
 }
