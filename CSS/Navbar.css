@@ -52,11 +52,10 @@
 }
 
 .nav-front {
+	position: absolute;
 	width: 100%;
-	float: center;
 	height: 100%;
 	top: 0;
-	position: absolute;
 	text-align: center;
 	max-height: 200px;
 	pointer-events: none;		/* Makes name clickable */
@@ -65,7 +64,7 @@
 	pointer-events: all;
 	display: inline-block;
 	text-decoration: none;
-	padding: 0.6em;
+	padding: 0.6em 3%;
 	font-size: 18px;
 	color: var(--blue);
 	transition: background 0.3s ease, color 0.3s ease;

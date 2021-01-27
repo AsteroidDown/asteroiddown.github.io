@@ -2,11 +2,11 @@
 .icons {
 	text-align: center;
 	font-size: 36px;
-	padding: 12px 24px 12px;
+	padding: 0px 12px 18px; 
 }
 
 .icons a {
-	 padding: 0px 12px;
+	 padding: 12px 3%;
 }
 
 .fa-facebook-square:hover {color: #352FE2}

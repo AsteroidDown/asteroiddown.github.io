@@ -9,13 +9,18 @@
 	overflow: hidden;
 }
 
-.work-tab {
-	width: 100%;
-	overflow: hidden;
+.work-experience {
+	min-height: 300px;
+	display: flex;
+	margin-bottom: 1em;
+}
+.work-experience > div.work-tab {
 	background-color: var(--global2);
-	border-radius: 10px 10px 0px 0px;
+	width: 30%;
+	overflow: hidden;
+	border-radius: 10px 0px 0px 10px;
 	border: 1px solid var(--global3);
-	border-bottom: none;
+	border-right: none;
 }
 
 /* Style the buttons inside the tab */
@@ -25,15 +30,13 @@
 	appearance: none;
 	
 	background-color: var(--global2);
-	padding: 0.5em;
-	width: 25%;
-	float: left;
-	font-size: auto;
+	padding: 0.75em 0em 0.75em 0.7em;
+	width: 100%;
+	font-size: 18px;
 	font-weight: bold;
+	text-align: left;
 	color: var(--bodycolor);
 	border: none;
-	outline: none;
-	cursor: pointer;
 	transition: 0.3s;
 }
 
@@ -45,17 +48,33 @@
 }
 
 /* Style the tab content */
-.work-tabcontent {
-	border: 1px solid var(--global3);
-	border-top: none;
-	display: none;
+.work-experience > div.work-tabcontent {
+	float: right;
+	display: none; 
 	padding: 6px 12px;
-	border-radius: 0px 0px 10px 10px;	
+	width: 70%;
+	border: 1px solid var(--global3);
+	border-left: none;
+	border-radius: 0px 10px 10px 0px;
 }
 
 /* Have the overview tab displayed initially */
 .work-tabcontent#Overview {
-	display: block;
+	display: inline-block;
+}
+
+/* Word Details */
+.work-position, .work-date {
+	color: var(--blue);
+}
+.work-position {
+	margin-left: 0.6em;
+}
+.work-date {
+	display: inline-block;
+	margin-right: 0.6em;
+	float: right;
+	font-style: italic;
 }
 
 .work-ref {
@@ -115,10 +134,30 @@
 
 
 @media screen and (max-width: 850px) {
-	.work-tab button {width: 100%; border-bottom: 1px solid var(--global2)}
+	/* Work Tabs */
+	.work-tab button {border-bottom: 1px solid var(--global2); text-align: center; font-size: 16px;}
+	.work-experience {min-height: auto; flex-direction: column;}
+	.work-experience > div.work-tab {
+		width: 100%;
+		min-height: auto;
+		border: 1px solid var(--global3);
+		border-radius: 10px 10px 0px 0px;
+		border-bottom: none;
+	}
+	.work-experience > div.work-tabcontent {
+		width: 100%; 
+		min-height: auto; 
+		border: 1px solid var(--global3);
+		border-radius: 0px 0px 10px 10px;
+		border-top: none;
+	}
+
+	/* References */
 	.work-ref-button {pointer-events: all;}
-	.work-ref-button i {display: inline-block; float: right; margin: 0.2em 0.5em;}
+	.work-ref-button i {display: inline-block; float: right; margin: 0.1em 0.5em;}
 	.work-ref-container {grid-template-columns: auto; max-height: 0px;}
+
+	
 }
 
 
