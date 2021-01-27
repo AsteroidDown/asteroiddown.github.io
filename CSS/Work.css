@@ -10,7 +10,7 @@
 }
 
 .work-experience {
-	min-height: 300px;
+	min-height: 400px;
 	display: flex;
 	margin-bottom: 1em;
 }
@@ -64,12 +64,11 @@
 }
 
 /* Word Details */
-.work-position, .work-date {
-	color: var(--blue);
-}
-.work-position {
-	margin-left: 0.6em;
-}
+.work-tabcontent p {margin-bottom: 1em;}
+.work-break {width: 100%; border: 1px solid var(--global2);}
+.work-name {display: block;	color: var(--orange); font-weight: bold; margin-top: 0.7em;}
+.work-position, .work-date {color: var(--blue);}
+.work-position {margin-left: 0.6em;}
 .work-date {
 	display: inline-block;
 	margin-right: 0.6em;
@@ -77,6 +76,7 @@
 	font-style: italic;
 }
 
+/* References */
 .work-ref {
 	margin-top: 0.5em;
 	width: 100%;
@@ -135,7 +135,7 @@
 
 @media screen and (max-width: 850px) {
 	/* Work Tabs */
-	.work-tab button {border-bottom: 1px solid var(--global2); text-align: center; font-size: 16px;}
+	.work-tab button { text-align: center; font-size: 16px; border-bottom: 1px solid var(--global2);}
 	.work-experience {min-height: auto; flex-direction: column;}
 	.work-experience > div.work-tab {
 		width: 100%;
@@ -146,7 +146,7 @@
 	}
 	.work-experience > div.work-tabcontent {
 		width: 100%; 
-		min-height: auto; 
+		min-height: 300px; 
 		border: 1px solid var(--global3);
 		border-radius: 0px 0px 10px 10px;
 		border-top: none;
