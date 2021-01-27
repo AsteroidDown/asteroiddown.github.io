@@ -99,8 +99,9 @@
 }
 
 .work-ref-col {
-	margin: 0em 0.4em 0.4em;
 	display: inline-block;
+	position: relative;
+	margin: 0em 0.4em 0.4em;
 	border: 2px solid var(--global3);
 	border-radius: 10px;
 	overflow: hidden;
@@ -108,10 +109,12 @@
 
 /* Style reference content */
 .work-ref-content{
-	margin: 0.7em;
-	font-style: italic;
+	margin: auto 0.75em;
+	padding: 1.5em 1em 3.5em;
 	text-align: center;
-	/*font-family: "Bookman Old Style";*/
+	font-style: italic;
+	/*font-family: "Bookman Old Style";
+	font-size: 18px;*/
 }
 /* Add quotes before and after reference content */
 .work-ref-content:before, .work-ref-content:after {
@@ -119,6 +122,8 @@
 }
 .work-ref-person {
 	background: var(--global3);
+	position: absolute;
+	bottom: 0;
 	width: 100%;
 	padding: 0.1em 1em;
 }
