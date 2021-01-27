@@ -24,9 +24,7 @@ body {
 }
 
 /* used to style section boxes */
-.section {
-	padding: 0em 7.5%;
-}
+.section {padding: 0em 7.5%;}
 
 /* Used as a break between sections */
 .break {
@@ -35,9 +33,21 @@ body {
 	width: auto;
 	margin: 2em 10% 1em;
 }
+/* Used as a break inside sections */
+.inner-break {width: 100%; border: 1px solid var(--global2);}
+
+/* Used to style dates */
+.date {
+	display: inline-block;
+	margin-right: 0.6em;
+	float: right;
+	font-style: italic;
+	color: var(--blue);
+}
 
 @media screen and (max-width: 850px) {
 	.section {padding: 0em 1em;}
+	.break {margin: 2em 2em 1em;}
 }
 
 /* ---------- Text Styling ---------- */
@@ -60,6 +70,11 @@ h3 {
 h4 {
 	margin-top: 0.2em;
 	color: var(--orange);
+}
+
+h5 {
+	margin-top: 0.75em;
+	color: var(--blue);
 }
 
 p {

@@ -67,16 +67,8 @@
 /* Word Details */
 .work-tabcontent p {margin-bottom: 1em;}
 .work-tabcontent li {margin-right: 1em;}
-.work-break {width: 100%; border: 1px solid var(--global2);}
 .work-name {display: block;	color: var(--orange); font-weight: bold; margin-top: 0.7em;}
-.work-position, .work-date {color: var(--blue);}
-.work-position {margin-left: 0.6em;}
-.work-date {
-	display: inline-block;
-	margin-right: 0.6em;
-	float: right;
-	font-style: italic;
-}
+.work-position {color: var(--blue); margin-left: 0.6em;}
 
 /* References */
 .work-ref {

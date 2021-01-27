@@ -6,19 +6,36 @@
 .edu-container {
 	position: relative;
 	overflow: hidden;
+	padding-left: 1em;
 }
 
 .edu-left {
 	float: left;
-	width: 70%;
+	width: 75%;
+}
+.edu-left .date {
+	margin-top: 0.7em;
 }
 
 .edu-right {
 	float: right;
-	width: 30%;
+	width: 25%;
 }
 .edu-right img {
-	float: right;
+	display: block;
+	margin: 1em auto 0em auto;
 	width: auto;
 	max-width: 60%;
+}
+.edu-course-container {
+	display: grid;
+	grid-template-columns: 33.33% 33.33% 33.33%;
+}
+
+
+@media screen and (max-width: 850px) {
+	.edu-left {width: 100%;}
+	.edu-right {width: 0%;}
+	.edu-course-container {grid-template-columns: 50% 50%;
+}
 }
