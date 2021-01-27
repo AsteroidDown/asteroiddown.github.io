@@ -29,6 +29,7 @@
 }
 .edu-course-container {
 	display: grid;
+	padding-left: 0.7em;
 	grid-template-columns: 33.33% 33.33% 33.33%;
 }
 
@@ -36,6 +37,9 @@
 @media screen and (max-width: 850px) {
 	.edu-left {width: 100%;}
 	.edu-right {width: 0%;}
-	.edu-course-container {grid-template-columns: 50% 50%;
+	.edu-course-container {grid-template-columns: 50% 50%;}
 }
-}
+
+
+
+
