@@ -1,4 +1,4 @@
-.accordion {
+.accordion-button {
   cursor: pointer;
   margin-top: 0.5em;
   width: 100%;
@@ -12,4 +12,12 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease;
+}
+
+.acc-tog {
+  transition: transform 0.4s ease;
+}
+
+.acc-tog.tog-rotate {
+  transform: rotate(-45deg);
 }

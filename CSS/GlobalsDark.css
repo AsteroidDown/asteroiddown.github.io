@@ -52,8 +52,12 @@ h4 {
 
 p {
 	padding: 0.2em;
-	margin: 0em 0.2em;
+	margin: 0em 0.5em;
 	text-align: justify;
+}
+
+a {
+	text-decoration: none;
 }
 
 .icons a {

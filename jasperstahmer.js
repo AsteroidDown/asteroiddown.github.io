@@ -1,18 +1,17 @@
 // ---------- Accordians ---------- //
-function accordian(name) {
-  var panel = document.getElementById(name);
-  var extra = 0;
+function accordian(accName, togName) {
+  var panel = document.getElementById(accName);
+  var tog = document.getElementById(togName);
 
-  // Extra scroll height for references box
-  if (name === 'acc-ref') {
-    extra = 100;
-  }
-
+  // Change panel max height
   if (panel.style.maxHeight) {
     panel.style.maxHeight = null;
   } else {
-    panel.style.maxHeight = panel.scrollHeight + extra + "px";
+    panel.style.maxHeight = panel.scrollHeight + "px";
   }
+
+  // Toggle rotate class
+  tog.classList.toggle("tog-rotate");
 }
 
 

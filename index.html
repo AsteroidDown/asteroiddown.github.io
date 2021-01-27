@@ -53,22 +53,22 @@
   
 <!-- ---------- NAVBAR ---------- -->
 <div class="nav">
-
   <div class="nav-container">
-    <div class="nav-left">
-      <!-- Brand Name -->
-      <div class="nav-name-hide" id="nav-name">
-        <a href="javascript:void(0);" onclick="collapseAndJump(172);">Jasper Stahmer</a>
-      </div>
+
+    <div class="nav-back">
+      <!-- My Name -->
+      <button class="nav-name-hide" id="nav-name" onclick="collapseAndJump(172);">
+        <a>Jasper Stahmer</a>
+      </button>
 
       <!-- Collapse Button -->
-      <button class="nav-toggler" onclick="accordian('acc-nav');">
-        <i class="fa fa-bars"></i>
+      <button class="nav-toggler accordion-button" onclick="accordian('acc-nav', 'tog-nav');">
+        <i class="fa fa-bars" id="tog-nav"></i>
       </button>
     </div>
 
     <!-- Links --> 
-    <div class="nav-right" id="acc-nav">
+    <div class="nav-front accordian-panel" id="acc-nav">
       <a href="javascript:void(0);" onclick="collapseAndJump(674);">Work Experience</a>
       <a href="#edu"     onclick="collapseAndJump(674)();">Education</a>
       <a href="#game"    onclick="collapseAndJump(674)();">My Game</a>
@@ -92,16 +92,12 @@
 
     <!-- Right Section -->
     <div class="prof-right">
-      <button class="accordion" onclick="accordian('acc-skill');">
-        <div class="skill-left">
-          <h3>
-            <i class="fas fa-code"></i>
-            Coding Skills
-          </h3>
-        </div>
-        <div class="skill-right" id="tog-skill">
-          <h3><i class="fas fa-plus"></i></h3>
-        </div>
+      <button class="accordion-button" onclick="accordian('acc-skill', 'tog-skill');">
+        <h3>
+          <i class="fas fa-code"></i>
+          Coding Skills
+          <i class="fas fa-plus acc-tog" id="tog-skill"></i>
+        </h3>
       </button>
 
       <!-- Skills -->
@@ -189,12 +185,12 @@
 
   <!-- References Section -->
   <div class="work-ref">
-    <button class="work-ref-button" onclick="accordian('acc-ref')">
-      <h3>References<i class="fas fa-plus"></i></h3>
+    <button class="work-ref-button" onclick="accordian('acc-ref', 'tog-ref')">
+      <h3>References<i class="fas fa-plus acc-tog" id="tog-ref"></i></h3>
     </button>
 
 
-    <div class="work-ref-container" id="acc-ref">
+    <div class="work-ref-container accordian-panel" id="acc-ref">
 
       <div class="work-ref-col">
         <p class="work-ref-content">Testing the reference column</p>

@@ -11,14 +11,14 @@
 	overflow: hidden;
 }
 
+/* Profile Write-Up Area */
 .prof-left {
 	width: 60%;
 	float: left;
 	margin-bottom: 1em;
 }
-.prof-left p {
-	margin: 0em 0.5em;
-}
+
+/* Coding Skills Area */
 .prof-right {
 	background: var(--global2);
 	width: 40%;
@@ -26,6 +26,7 @@
 	border-radius: 10px;
 	max-width: 20em;
 }
+/* Top Button for Accordian */
 .prof-right button {
 	padding-top: 0.3em;
 	background: rgba(0, 0, 0, 0);
@@ -34,15 +35,13 @@
 .prof-right h3 {
 	padding-left: 0.25em;
 }
+.prof-right i#tog-skill {
+	display: none;
+}
 
 .skill-left {
 	width: auto;
 }
-.skill-right {
-	padding-right: 0.5em;
-	display: none;
-}
-
 .accordian-panel {
 	max-height: 500px;
 }
@@ -107,8 +106,6 @@
 	.prof-right {width: 100%; max-width: 100%;}
 	.prof-right button {pointer-events: all;}
 	.accordian-panel {max-height: 0px;}
-	/*.skill-left {width: 80%; float: left;}*/
-	.skill-right {display: static}
-	/*.skill-right {width: 20%; float: right; text-align: right; display: static}*/
+	.prof-right i#tog-skill {display: inline-block; float: right; margin: 0.1em 0.5em;}
 }
 

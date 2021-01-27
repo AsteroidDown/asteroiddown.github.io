@@ -70,7 +70,6 @@
 	background: rgba(0,0,0,0);
 	display: block;
 	margin: 0.3em 0.3em 0em;
-	top: 50%;
 	border: none;
 	width: 100%;
 	text-align: left;
@@ -96,6 +95,7 @@
 
 /* Style reference content */
 .work-ref-content{
+	margin: 0.7em;
 	font-style: italic;
 	text-align: center;
 	/*font-family: "Bookman Old Style";*/
