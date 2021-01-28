@@ -11,6 +11,21 @@
 	width: 70%; 
 	float: right;
 }
+.game-right a {
+	overflow: hidden;
+	background: linear-gradient(to right, var(--orange) 50%, royalblue 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+  	background-position: 100%;
+	text-decoration: none;
+	transition: background-position 0.3s ease;
+}
+.game-right a:hover {
+	background-position: 0 100%;
+}
+
 .game-left img {
 	min-height: 15em;
   	image-rendering: pixelated;
