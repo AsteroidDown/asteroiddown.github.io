@@ -92,14 +92,14 @@
 	display: none;
 }
 
+/* Container with the reference columns */
 .work-ref-container {
 	display: grid;
 	grid-template-columns: auto auto auto;
    	transition: max-height 0.4s ease-out;
 }
-
+/* Reference column */
 .work-ref-col {
-	display: inline-block;
 	position: relative;
 	margin: 0em 0.4em 0.4em;
 	border: 2px solid var(--global3);
@@ -109,27 +109,27 @@
 
 /* Style reference content */
 .work-ref-content{
-	margin: auto 0.75em;
-	padding: 1.5em 1em 3.5em;
+	margin: 2em 2em 6em;
 	text-align: center;
 	font-style: italic;
 	/*font-family: "Bookman Old Style";
 	font-size: 18px;*/
 }
 /* Add quotes before and after reference content */
-.work-ref-content:before, .work-ref-content:after {
-	content: '"';
-}
+.work-ref-content:before {content: '" ';}
+.work-ref-content:after {content: ' "';}
+
+/* Area with refernce name and company */
 .work-ref-person {
 	background: var(--global3);
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	padding: 0.1em 1em;
+	padding: 0.1em 0.75em;
 }
-.work-ref-person p {
-	text-align: right;
-}
+/* Style reference person text */
+.work-ref-person p {text-align: right;}
+.work-ref-company {font-style: italic;}
 
 
 @media screen and (max-width: 850px) {
@@ -155,6 +155,7 @@
 	.work-ref-button {pointer-events: all;}
 	.work-ref-button i {display: inline-block; float: right; margin: 0.1em 0.5em;}
 	.work-ref-container {grid-template-columns: auto; max-height: 0px;}
+	.work-ref-content {margin: 1em 1em 5em;}
 
 	
 }

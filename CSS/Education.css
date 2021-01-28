@@ -15,6 +15,7 @@
 }
 .edu-left .date {
 	margin-top: 0.7em;
+	transform: translateY(-2.65em);
 }
 
 .edu-right {
@@ -32,10 +33,14 @@
 	padding-left: 0.7em;
 	grid-template-columns: 33.33% 33.33% 33.33%;
 }
+.edu-course {
+	padding: 0.25em;
+}
 
 
 @media screen and (max-width: 850px) {
 	.edu-left {width: 100%;}
+	.edu-left .date {float: none; display: block; transform: translateY(0);}
 	.edu-right {width: 0%;}
 	.edu-course-container {grid-template-columns: 50% 50%;}
 }
