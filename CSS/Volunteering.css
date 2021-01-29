@@ -14,9 +14,9 @@
 	margin-bottom: 0.5em;
 }
 
-.vol-col p {
-	margin: 0; 
-}
+.vol-col p {margin: 0;}
+
+.vol-col-seperator {display: none;}
 
 .vol-role {
 	color: var(--blue);
@@ -26,5 +26,5 @@
 
 @media screen and (max-width: 850px) {
 	.vol-container {grid-template-columns: auto;}
-	.vol-col {margin-bottom: 1.5em;}
+	.vol-col-seperator {display: initial; margin-bottom: 1em;}
 }
