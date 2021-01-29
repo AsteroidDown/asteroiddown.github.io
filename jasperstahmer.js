@@ -47,16 +47,49 @@ function nameDisappear() {
 }
 
 function smoothScroll(pos) {
-	document.getElementById("demo").innerHTML = document.documentElement.scrollTop;
-	window.scrollTo(0, pos);
+
+  var duration = 500;
+  const cosParameter = (document.scrollingElement.scrollTop - pos) / 2;
+  let scrollCount = 0, oldTimestamp = null;
+
+  function step (newTimestamp) {
+    if (oldTimestamp !== null) {
+      scrollCount += Math.PI * (newTimestamp - oldTimestamp) / duration;
+      if (scrollCount >= Math.PI) return element.scrollTop = pos;
+      document.scrollingElement.scrollTop = pos + cosParameter + cosParameter * Math.cos(scrollCount);
+    }
+    oldTimestamp = newTimestamp;
+    window.requestAnimationFrame(step);
+  }
+  window.requestAnimationFrame(step);
 }
 
-function collapseAndJump(pos) {
-  var panel = document.getElementById("nav-links");
-  panel.style.transitionDuration = "0s";
-  panel.style.maxHeight = null;
+function collapseAndJump(breakName) {
+
+  // Get Nav panel
+  var panel = document.getElementById("acc-nav");
+
+  // Get selected break position from top
+  var selectedBreak = document.getElementById(breakName);
+
+  // Set Scroll position
+  var pos = selectedBreak.offsetTop - panel.offsetHeight; 
+
+  // Get page width to check if mobile sized
+  var width = $(document).width();
+
+  if (width < 850) {
+    // Collapse Panel
+    panel.style.transitionDuration = "0s";
+    panel.style.maxHeight = null;
+    panel.style.transitionDuration = "0.25s";
+
+    // Add offset to
+    pos -= 47;
+  }
+
+  // Scroll to position
   smoothScroll(pos);
-  panel.style.transitionDuration = "0.25s";
 }
 
 //document.getElementById("demo").innerHTML = x.className;
