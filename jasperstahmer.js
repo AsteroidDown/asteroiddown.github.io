@@ -85,7 +85,7 @@ function collapseAndJump(breakName) {
     panel.style.transitionDuration = "0.25s";
 
     // Add offset to
-    pos -= 47;
+    pos -= 45;
   }
 
   // Scroll to position
