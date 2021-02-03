@@ -6,7 +6,7 @@
 .vol-container {
 	margin: 0em 1em;
 	display: grid;
-	grid-template-columns: auto auto auto;
+	grid-template-columns: 33.33% 33.33% 33.33%;
 }
 
 .vol-col .inner-break {
@@ -15,6 +15,9 @@
 }
 
 .vol-col p {margin: 0;}
+
+.vol-col ul {padding-left: 1.3em;}
+.vol-col li {padding-right: 1em;}
 
 .vol-col-seperator {display: none;}
 

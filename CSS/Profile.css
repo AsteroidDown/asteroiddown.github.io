@@ -72,7 +72,7 @@
 	border: 10px solid var(--gloabl1);
 }
 .skill-fill {
-	background: #FE7701;
+	background: var(--orange);
 	max-height: 1.2em;
 	width: 100%;
 	height: 100%;

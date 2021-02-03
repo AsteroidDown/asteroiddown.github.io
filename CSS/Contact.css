@@ -4,8 +4,41 @@
 	height: 500px;
 }
 
-input[type=text] {
+.contact-button {
+	/*display: block;
+	color: var(--bodycolor);
+	margin: 1em;
+	width: 50%;
+	border: 2px solid var(--global2);
+	border-radius: 10px;*/
+
+	/*overflow: hidden;
+	background: linear-gradient(to right, var(--orange) 50%, rgba(0,0,0,0) 50%);
+	background-size: 200% 100%;
+  	background-position: 100%;
+	text-decoration: none;
+	transition: background-position 0.3s ease;*/
+}
+
+
+}
+.contact-button:hover {
+	/*background-position: 0 100%;*/
+	color: #FFFFFF;
+/*}
+
+.contact i {
+	margin: 0.5em 0.2em;
+	font-size: 32px;
+	display: inline-block;
+}
+.contact p {
+	display: inline-block;
+	vertical-align: center;
+}*/
+
+/*input[type=text] {
 	width: 90%;
  	padding: 0.1em;
  	margin: 0.2em 1em;
-}
+}*/

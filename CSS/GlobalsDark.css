@@ -45,6 +45,22 @@ body {
 	color: var(--blue);
 }
 
+/* Used to make links swipe to a new colour */
+.swipe-link {
+	overflow: hidden;
+	background: linear-gradient(to right, var(--orange) 50%, royalblue 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+  	background-position: 100%;
+	text-decoration: none;
+	transition: background-position 0.3s ease;
+}
+.swipe-link:hover {
+	background-position: 0 100%;
+}
+
 @media screen and (max-width: 850px) {
 	.section {padding: 0em 1em;}
 	.break {margin: 2em 2em 1em;}
