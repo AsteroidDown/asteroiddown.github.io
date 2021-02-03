@@ -1,44 +1,63 @@
-/* ---------- Contact ---------- */
+ /* ---------- Contact ---------- */
 .contact {
 	width: 100%;
-	height: 500px;
 }
 
-.contact-button {
-	/*display: block;
-	color: var(--bodycolor);
-	margin: 1em;
-	width: 50%;
-	border: 2px solid var(--global2);
-	border-radius: 10px;*/
+.contact-container {
+	display: grid;
+	grid-template-columns: 50% 50%;
+	margin-bottom: 2em;
+}
 
-	/*overflow: hidden;
+.contact-block {
+	display: block;
+	margin: 0.2em;
+	padding: 1em;
+	text-align: center;
+	border: 2px solid var(--global2);
+	border-radius: 10px;
+
+	/* Add background swipe effect */
+	overflow: hidden;
 	background: linear-gradient(to right, var(--orange) 50%, rgba(0,0,0,0) 50%);
 	background-size: 200% 100%;
   	background-position: 100%;
 	text-decoration: none;
-	transition: background-position 0.3s ease;*/
+	transition: background-position 0.4s ease;
 }
 
-
+/* Background swipe effect on hover */
+.contact-block:hover {
+	background-position: 0 100%;
 }
-.contact-button:hover {
-	/*background-position: 0 100%;*/
-	color: #FFFFFF;
-/*}
+
+.contact a {
+	font-weight: bold;
+	text-decoration: none;
+	transition: color 0.4s ease;
+}
+.contact a:hover {
+	color: var(--global1);
+}
 
 .contact i {
-	margin: 0.5em 0.2em;
+	margin-left: -2.75em;
+	margin-top: -0.05em;
+	position: absolute;
 	font-size: 32px;
 	display: inline-block;
 }
-.contact p {
-	display: inline-block;
-	vertical-align: center;
-}*/
+.contact-block p {
+	margin-left: 4em;
+}
+
+/* ---------- Small Screen Adjustments ---------- */
+@media screen and (max-width: 850px) {
+	.contact-container {grid-template-columns: 100%;}
+}
 
 /*input[type=text] {
 	width: 90%;
  	padding: 0.1em;
  	margin: 0.2em 1em;
-}*/
+}
