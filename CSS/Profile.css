@@ -1,7 +1,16 @@
+
 /* ---------- Personal Profile ---------- */
 
 .prof {
 	width: 100%;
+
+	/* For fade-in */
+	opacity: 0%;
+	transition: opacity var(--t2) ease;
+  	transition-delay: var(--t3);
+}
+.prof.fade-in {
+	opacity: 100%;
 }
 
 .prof-container {
@@ -15,7 +24,6 @@
 .prof-left {
 	width: 60%;
 	float: left;
-	margin-bottom: 1em;
 }
 
 /* Coding Skills Area */
@@ -25,6 +33,14 @@
 	float: right;
 	border-radius: 10px;
 	max-width: 20em;
+
+	/* For fade-in*/
+	opacity: 0%;
+	transition: opacity var(--t2) ease;
+  	transition-delay: var(--t4);
+}
+.prof-right.fade-in {
+	opacity: 100%;
 }
 /* Top Button for Accordian */
 .prof-right button {
@@ -42,6 +58,7 @@
 .skill-left {
 	width: auto;
 }
+
 .accordian-panel {
 	max-height: 500px;
 }
@@ -104,7 +121,7 @@
 
 /* ---------- Small Screen Adjustments ---------- */
 @media screen and (max-width: 850px) {
-	.prof-left {width: 100%;}
+	.prof-left {width: 100%; margin-bottom: 1em;}
 	.prof-right {width: 100%; max-width: 100%;}
 	.prof-right button {pointer-events: all;}
 	.accordian-panel {max-height: 0px;}

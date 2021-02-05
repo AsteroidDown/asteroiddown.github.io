@@ -1,6 +1,14 @@
 /* ---------- Work Experience ---------- */
 .work {
 	width: 100%;
+
+	/* For fade-in */
+	opacity: 0%;
+	transition: opacity var(--t2) ease;
+  	transition-delay: var(--t5);
+}
+.work.fade-in {
+	opacity: 100%;
 }
 
 .work-container {

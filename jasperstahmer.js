@@ -1,3 +1,38 @@
+// ---------- Fade-in ---------- //
+function fadeIn() {
+  var header  = document.getElementById("header");
+  var nav     = document.getElementById("nav");
+  var prof    = document.getElementById("prof");
+  var profr   = document.getElementById("prof-right");
+  var workbr  = document.getElementById("work-break");
+  var work    = document.getElementById("work");
+  var volbr   = document.getElementById("vol-break");
+  var vol     = document.getElementById("vol");
+  var edubr   = document.getElementById("edu-break");
+  var edu     = document.getElementById("edu");
+  var gamebr  = document.getElementById("game-break");
+  var game    = document.getElementById("game");
+  var conbr   = document.getElementById("contact-break");
+  var contact = document.getElementById("contact");
+
+
+  header.classList.toggle("fade-in");
+  nav.classList.toggle("fade-in");
+  prof.classList.toggle("fade-in");
+  profr.classList.toggle("fade-in");
+  workbr.classList.toggle("fade-in");
+  work.classList.toggle("fade-in");
+  volbr.classList.toggle("fade-in");
+  vol.classList.toggle("fade-in");
+  edubr.classList.toggle("fade-in");
+  edu.classList.toggle("fade-in");
+  gamebr.classList.toggle("fade-in");
+  game.classList.toggle("fade-in");
+  conbr.classList.toggle("fade-in");
+  contact.classList.toggle("fade-in");
+
+}
+
 // ---------- Accordians ---------- //
 function accordian(accName, togName) {
   var panel = document.getElementById(accName);

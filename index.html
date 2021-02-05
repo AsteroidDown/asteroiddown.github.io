@@ -28,10 +28,10 @@
 </head>
 
 
-<body>
+<body onload="fadeIn();">
 
 <!-- ---------- Header ---------- -->
-<div class="container-fluid parallax">
+<div class="container-fluid parallax" id="header">
 
   <!-- Name -->
   <h1>Jasper Stahmer</h1>
@@ -53,7 +53,7 @@
 
   
 <!-- ---------- NAVBAR ---------- -->
-<div class="nav">
+<div class="nav" id="nav">
   <div class="nav-container">
 
     <div class="nav-back">
@@ -101,7 +101,7 @@
     </div>
 
     <!-- Right Section -->
-    <div class="prof-right">
+    <div class="prof-right" id="prof-right">
       <button class="accordion-button" onclick="accordian('acc-skill', 'tog-skill');">
         <h3>
           <i class="fas fa-code"></i>
@@ -302,7 +302,7 @@
 
 <!-- ---------- Volunteering ---------- -->
 <div class="break" id="vol-break"></div>
-<div class="vol section">
+<div class="vol section" id="vol">
   <h2>Volunteering</h2>
 
   <div class="vol-container">
@@ -351,7 +351,7 @@
 
 <!-- ---------- Education ---------- -->
 <div class="break" id="edu-break"></div>
-<div class="edu section">
+<div class="edu section" id="edu">
   <h2>Education</h2>
 
   <div class="edu-container">

@@ -8,10 +8,20 @@
 	z-index: 1;						/* Keeps over others */
 	overflow: hidden;
 	border-bottom: 1px solid var(--global2);
+
+	/* For fade-in */
+	opacity: 0%;
+	transition: opacity var(--t2) ease;
+  	transition-delay: var(--t2);
 }
+.nav.fade-in {
+	opacity: 100%;
+}
+
 .nav-container {
 	width: 100%;
 }
+
 
 /* Nav name and Collapse button */
 .nav-back {

@@ -1,7 +1,16 @@
 /* ---------- Game ---------- */
 .game {
 	width: 100%;
+
+	/* For fade-in */
+	opacity: 0%;
+	transition: opacity var(--t2) ease;
+  	transition-delay: var(--t5);
 }
+.game.fade-in {
+	opacity: 100%;
+}
+
 .game-container {
 	position: relative;
 	overflow: hidden;

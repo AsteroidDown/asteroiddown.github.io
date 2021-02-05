@@ -1,6 +1,14 @@
 /* ---------- Volunteering ---------- */
 .vol {
 	width: 100%;
+
+	/* For fade-in */
+	opacity: 0%;
+	transition: opacity var(--t2) ease;
+  	transition-delay: var(--t5);
+}
+.vol.fade-in {
+	opacity: 100%;
 }
 
 .vol-container {
