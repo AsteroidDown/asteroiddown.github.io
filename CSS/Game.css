@@ -17,22 +17,31 @@
 	margin-bottom: 2em;
 }
 
+.game-left {
+	width: 30%;
+	float: left;
+}
+
+.Walter-png, .Walter-gif {
+	position: absolute;
+  	image-rendering: pixelated;
+	margin: auto;
+	height: 100%;
+	opacity: 100%;
+}
+.Walter-png.hide, .Walter-gif.hide {
+	opacity: 0%;
+}
+
 .game-right {
 	width: 70%; 
 	float: right;
 }
 
-.game-left img {
-	min-height: 15em;
-  	image-rendering: pixelated;
-	display: block;
-	margin: auto;
-}
 
-.game-left {
-	width: 30%;
-	float: left;
-}
+
+
+
 
 
 @media screen and (max-width: 850px) {

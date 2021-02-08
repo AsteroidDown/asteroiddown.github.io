@@ -127,6 +127,16 @@ function collapseAndJump(breakName) {
   smoothScroll(pos);
 }
 
+
+// ---------- Scroll Functions ---------- //
+function switchImage() {
+  png = document.getElementById("Walter-png");
+  gif = document.getElementById("Walter-gif");
+
+  png.classList.toggle("hide");
+  gif.classList.toggle("hide");
+}
+
 //document.getElementById("demo").innerHTML = x.className;
 
 
