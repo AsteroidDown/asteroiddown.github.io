@@ -89,7 +89,7 @@
 	.nav-toggler {display: initial; transition: color 300ms ease;}
 	.nav-toggler:hover {color: #ff983d;}
 	.nav-front {width: 100%; text-align: left; position: relative;}
-	.nav-front a {width: 100%; padding-left: 1em;}
+	.nav-front a {width: 100%; padding-left: 2em;}
 }
 
 
