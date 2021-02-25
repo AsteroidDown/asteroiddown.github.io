@@ -128,7 +128,7 @@ function collapseAndJump(breakName) {
 }
 
 
-// ---------- Scroll Functions ---------- //
+// ---------- Image Functions ---------- //
 function switchImage() {
   png = document.getElementById("Walter-png");
   gif = document.getElementById("Walter-gif");
