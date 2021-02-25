@@ -4,7 +4,7 @@
   background: linear-gradient(151deg, var(--orange) 0%, #e31769 25%, var(--blue) 65%);
 
   /* Set a specific height */
-  min-height: 100px; 
+  min-height: 50px; 
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
