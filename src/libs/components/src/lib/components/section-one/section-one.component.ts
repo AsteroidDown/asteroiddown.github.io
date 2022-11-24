@@ -1,13 +1,20 @@
-import { Component, ElementRef, HostListener, ViewChild } from "@angular/core";
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  ViewChild,
+} from "@angular/core";
 
 @Component({
   selector: "section-one",
   templateUrl: "./section-one.component.html",
   styleUrls: ["./section-one.component.scss"],
 })
-export class SectionOneComponent {
+export class SectionOneComponent implements OnInit {
   @ViewChild("container") private container?: ElementRef<HTMLDivElement>;
   containerInView = false;
+  containerHeight = 0;
 
   text1 = "";
   text2 = "";
@@ -54,5 +61,9 @@ export class SectionOneComponent {
         this.index === 0 ? 1000 : this.index === 15 ? 1000 : 30
       )
     );
+  }
+
+  ngOnInit() {
+    this.containerHeight = window.innerHeight;
   }
 }

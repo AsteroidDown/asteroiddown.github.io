@@ -1,11 +1,14 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
-import { SectionOneComponent } from "./components/section-one/section-one.component";
-import { WelcomeComponent } from "./components/welcome/welome.component";
+import {
+  WelcomeComponent,
+  SectionOneComponent,
+  TestSectionComponent,
+} from "./components";
 
 @NgModule({
-  declarations: [WelcomeComponent, SectionOneComponent],
+  declarations: [WelcomeComponent, SectionOneComponent, TestSectionComponent],
   imports: [CommonModule],
-  exports: [WelcomeComponent, SectionOneComponent],
+  exports: [WelcomeComponent, SectionOneComponent, TestSectionComponent],
 })
 export class ComponentsModule {}

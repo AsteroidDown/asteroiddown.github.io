@@ -1,5 +1,5 @@
-<div #container class="container">
-  <div class="text-box-left">
+<div class="container" [style.height]="containerHeight + 'px'">
+  <div #container class="text-box-left">
     <p>{{ text1 }}</p>
     <p class="text2" [style.animation-name]="text2.length > 0 ? 'grow' : ''">
       {{ text2 }}
