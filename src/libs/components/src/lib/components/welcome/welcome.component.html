@@ -3,7 +3,7 @@
   [style.height]="height + 'px'"
   (click)="animation === 'rise' ? (animation = 'fall') : (animation = 'rise')"
 >
-  <div class="name" [style.height]="height + 'px'">
+  <div #nameDiv class="name" [style.height]="height + 'px'">
     <h1
       *ngFor="let letter of name; index as index"
       [style.animation]="animation + ' 1s forwards'"
@@ -14,16 +14,23 @@
     </h1>
   </div>
 
-  <div class="colors"></div>
+  <div class="colors" [style.width]="containerWidth + 'px'"></div>
 
-  <div class="message">
+  <div
+    #messageDiv
+    class="message"
+    [style.top]="height / 2 + 48 + 'px'"
+    [style.left]="messagePosition + 'px'"
+  >
     <h3>Let's get started</h3>
   </div>
 
   <div
     class="box"
     [style.animation]="
-      (animation === 'fall' ? 'slideIn 2' : 'slideOut 1') + 's forwards'
+      (animation === 'fall' ? 'boxIn 2' : 'boxOut 1') + 's forwards'
     "
+    [style.top]="height / 2 + 44 + 'px'"
+    [style.left]="messagePosition - 48 + 'px'"
   ></div>
 </div>

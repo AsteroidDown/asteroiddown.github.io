@@ -1,0 +1,17 @@
+<div #container class="container">
+  <div class="text-box-left">
+    <p>{{ text1 }}</p>
+    <p class="text2" [style.animation-name]="text2.length > 0 ? 'grow' : ''">
+      {{ text2 }}
+    </p>
+    <p class="text3">{{ text3 }}</p>
+    <div
+      class="typing"
+      [style.animation-iteration-count]="finishedLineOne ? '1' : 'infinite'"
+    ></div>
+  </div>
+
+  <div class="text-box-right">
+    <!-- <p>And I'm quite detail oriented</p> -->
+  </div>
+</div>
