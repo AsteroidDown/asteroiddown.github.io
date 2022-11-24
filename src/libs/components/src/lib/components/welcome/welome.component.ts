@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  HostListener,
   OnInit,
   ViewChild,
 } from "@angular/core";
@@ -12,10 +13,11 @@ import {
   styleUrls: ["./welcome.component.scss"],
 })
 export class WelcomeComponent implements OnInit, AfterViewInit {
-  constructor() {}
+  @ViewChild("container") private container?: ElementRef<HTMLDivElement>;
+  containerInView = false;
 
   name = ["J", "a", "s", "p", "e", "r", " ", "S", "t", "a", "h", "m", "e", "r"];
-  animation = "fall";
+  inAnimation = true;
 
   height = 0;
   containerWidth = 0;
@@ -23,6 +25,15 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
 
   @ViewChild("nameDiv") nameDiv: ElementRef | null = null;
   @ViewChild("messageDiv") messageDiv: ElementRef | null = null;
+
+  // @HostListener("window:scroll", ["$event"])
+  // scrolledIntoView() {
+  //   if (this.container) {
+  //     const rect = this.container.nativeElement.getBoundingClientRect();
+  //     // if (Math.abs(rect.top) > rect.height / 4) this.inAnimation = false;
+  //     // else this.inAnimation = true;
+  //   }
+  // }
 
   ngOnInit(): void {
     this.height = window.innerHeight;
@@ -33,7 +44,6 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
       this.containerWidth = this.nameDiv.nativeElement.clientWidth;
 
       if (window.innerWidth < 600) {
-        console.log(window.innerWidth);
         this.messagePosition =
           this.containerWidth - this.messageDiv.nativeElement.clientWidth + 16;
       } else {

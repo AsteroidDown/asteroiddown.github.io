@@ -6,17 +6,17 @@ import { Component, ElementRef, HostListener, ViewChild } from "@angular/core";
   styleUrls: ["./section-one.component.scss"],
 })
 export class SectionOneComponent {
-  @ViewChild("container")
-  private container?: ElementRef<HTMLDivElement>;
+  @ViewChild("container") private container?: ElementRef<HTMLDivElement>;
   containerInView = false;
-  loopCalled = false;
 
   text1 = "";
   text2 = "";
   text3 = "";
+
   index = 0;
-  lineOne = `I'm a developer, who sees the big picture`;
+  loopCalled = false;
   finishedLineOne = false;
+  lineOne = `I'm a developer, who sees the big picture`;
 
   @HostListener("window:load", ["$event"])
   @HostListener("window:scroll", ["$event"])

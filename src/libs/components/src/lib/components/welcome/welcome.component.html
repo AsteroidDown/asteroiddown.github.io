@@ -1,12 +1,13 @@
 <div
+  #container
   class="container"
   [style.height]="height + 'px'"
-  (click)="animation === 'rise' ? (animation = 'fall') : (animation = 'rise')"
+  (click)="inAnimation ? (inAnimation = false) : (inAnimation = true)"
 >
   <div #nameDiv class="name" [style.height]="height + 'px'">
     <h1
       *ngFor="let letter of name; index as index"
-      [style.animation]="animation + ' 1s forwards'"
+      [style.animation]="(inAnimation ? 'fall' : 'rise') + ' 1s forwards'"
       [style.animation-delay]="'' + 0.075 * index + 's'"
       [style.margin-right]="index === 6 ? '18px' : '2px'"
     >
@@ -27,9 +28,7 @@
 
   <div
     class="box"
-    [style.animation]="
-      (animation === 'fall' ? 'boxIn 2' : 'boxOut 1') + 's forwards'
-    "
+    [style.animation]="(inAnimation ? 'boxIn 2' : 'boxOut 1') + 's forwards'"
     [style.top]="height / 2 + 44 + 'px'"
     [style.left]="messagePosition - 48 + 'px'"
   ></div>
