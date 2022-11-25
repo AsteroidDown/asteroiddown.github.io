@@ -7,11 +7,11 @@ import {
 } from "@angular/core";
 
 @Component({
-  selector: "test-section",
-  templateUrl: "./test-section.component.html",
-  styleUrls: ["./test-section.component.scss"],
+  selector: "creative-section",
+  templateUrl: "./creative-section.component.html",
+  styleUrls: ["./creative-section.component.scss"],
 })
-export class TestSectionComponent implements OnInit {
+export class CreativeSectionComponent implements OnInit {
   @ViewChild("container") private container?: ElementRef<HTMLDivElement>;
   containerInView = false;
   containerHeight = 0;
@@ -19,9 +19,6 @@ export class TestSectionComponent implements OnInit {
   leftWidth = 0;
 
   animating = true;
-
-  // @ViewChild("left") private leftSide?: ElementRef<HTMLDivElement>;
-  // @ViewChild("right") private rightSide?: ElementRef<HTMLDivElement>;
 
   @HostListener("window:load", ["$event"])
   @HostListener("window:scroll", ["$event"])

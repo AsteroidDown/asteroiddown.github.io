@@ -5,12 +5,14 @@ import {
   SectionOneComponent,
   TestSectionComponent,
   InteractiveSectionComponent,
+  CreativeSectionComponent,
 } from "./components";
 
 @NgModule({
   declarations: [
     WelcomeComponent,
     SectionOneComponent,
+    CreativeSectionComponent,
     InteractiveSectionComponent,
     TestSectionComponent,
   ],
@@ -18,6 +20,7 @@ import {
   exports: [
     WelcomeComponent,
     SectionOneComponent,
+    CreativeSectionComponent,
     InteractiveSectionComponent,
     TestSectionComponent,
   ],
