@@ -26,14 +26,14 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
   @ViewChild("nameDiv") nameDiv: ElementRef | null = null;
   @ViewChild("messageDiv") messageDiv: ElementRef | null = null;
 
-  // @HostListener("window:scroll", ["$event"])
-  // scrolledIntoView() {
-  //   if (this.container) {
-  //     const rect = this.container.nativeElement.getBoundingClientRect();
-  //     // if (Math.abs(rect.top) > rect.height / 4) this.inAnimation = false;
-  //     // else this.inAnimation = true;
-  //   }
-  // }
+  @HostListener("window:scroll", ["$event"])
+  scrolledIntoView() {
+    if (this.container) {
+      const rect = this.container.nativeElement.getBoundingClientRect();
+      if (Math.abs(rect.top) > rect.height / 3) this.inAnimation = false;
+      else this.inAnimation = true;
+    }
+  }
 
   ngOnInit(): void {
     this.height = window.innerHeight;

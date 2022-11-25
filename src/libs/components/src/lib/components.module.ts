@@ -4,11 +4,22 @@ import {
   WelcomeComponent,
   SectionOneComponent,
   TestSectionComponent,
+  InteractiveSectionComponent,
 } from "./components";
 
 @NgModule({
-  declarations: [WelcomeComponent, SectionOneComponent, TestSectionComponent],
+  declarations: [
+    WelcomeComponent,
+    SectionOneComponent,
+    InteractiveSectionComponent,
+    TestSectionComponent,
+  ],
   imports: [CommonModule],
-  exports: [WelcomeComponent, SectionOneComponent, TestSectionComponent],
+  exports: [
+    WelcomeComponent,
+    SectionOneComponent,
+    InteractiveSectionComponent,
+    TestSectionComponent,
+  ],
 })
 export class ComponentsModule {}

@@ -45,7 +45,7 @@
     height: 100%;
     position: absolute;
     mix-blend-mode: darken;
-    background: linear-gradient(90deg, #00e5ff 0%, #fe7701 95%);
+    background: linear-gradient(90deg, #6700d6 0%, #fe7401 85%);
 
     animation: colorFadeIn 3s forwards;
 
@@ -87,7 +87,7 @@
     width: 40px;
     height: 40px;
     position: absolute;
-    background-color: #fe7701;
+    background-color: #fe7401;
 
     @keyframes boxIn {
       0% {
@@ -103,7 +103,7 @@
 
     @keyframes boxOut {
       to {
-        left: -500%;
+        left: -50%;
         width: 232px;
       }
       from {

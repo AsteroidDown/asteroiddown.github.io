@@ -1,0 +1,31 @@
+<div #container class="container" [style.height]="containerHeight + 'px'">
+  <div class="row" *ngFor="let row of rowsList; index as i">
+    <div
+      class="col"
+      *ngFor="let col of colsList; index as j"
+      [style.width]="boxLength + 'px'"
+      [style.height]="boxLength + 'px'"
+      (click)="boxesOff(i, j); oi = i; oj = j"
+    >
+      <div
+        class="box"
+        [style.animation]="
+          (boxes[i][j] ? 'growBox' : 'shrinkBox') + ' 1s forwards'
+        "
+      ></div>
+    </div>
+  </div>
+
+  <p
+    [style.animation]="(allOff ? 'fadeOutLeft' : 'fadeInLeft') + ' 2s forwards'"
+  >
+    Interactive
+  </p>
+  <p
+    [style.animation]="
+      (allOff ? 'fadeInRight' : 'fadeOutRight') + ' 2s forwards'
+    "
+  >
+    Cool, huh?
+  </p>
+</div>
