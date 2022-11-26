@@ -1,24 +1,18 @@
-import {
-  Component,
-  ElementRef,
-  HostListener,
-  OnInit,
-  ViewChild,
-} from "@angular/core";
+import { Component, ElementRef, HostListener, ViewChild } from "@angular/core";
 
 @Component({
   selector: "creative-section",
   templateUrl: "./creative-section.component.html",
   styleUrls: ["./creative-section.component.scss"],
 })
-export class CreativeSectionComponent implements OnInit {
+export class CreativeSectionComponent {
   @ViewChild("container") private container?: ElementRef<HTMLDivElement>;
   containerInView = false;
   containerHeight = 0;
 
   leftWidth = 0;
 
-  animating = true;
+  animating = false;
 
   @HostListener("window:load", ["$event"])
   @HostListener("window:scroll", ["$event"])
@@ -31,18 +25,18 @@ export class CreativeSectionComponent implements OnInit {
       this.containerInView = topShown && bottomShown;
 
       if (this.containerInView) {
-        setTimeout(() => (this.animating = false), 3000);
+        this.animating = true;
+
+        setTimeout(() => {
+          this.animating = false;
+          this.leftWidth = window.innerWidth;
+        }, 3000);
       }
     }
   }
 
   @HostListener("mousemove", ["$event"])
   mouseMove(mouseEvent: MouseEvent) {
-    if (!this.animating) this.leftWidth = mouseEvent.x;
-  }
-
-  ngOnInit() {
-    this.containerHeight = window.innerHeight;
-    this.leftWidth = window.innerWidth;
+    if (!this.animating && this.containerInView) this.leftWidth = mouseEvent.x;
   }
 }

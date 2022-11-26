@@ -27,28 +27,11 @@
     width: 0;
     z-index: 2;
     background-color: #6700d6;
-    animation-delay: 2s !important;
+    transition: width;
 
     h1 {
       font-size: 84px;
       font-family: "Brush Script MT", cursive;
-    }
-
-    @keyframes creativeSlideIn {
-      from {
-        width: 0;
-      }
-      to {
-        width: 100%;
-      }
-    }
-    @keyframes creativeSlideOut {
-      from {
-        width: 100%;
-      }
-      to {
-        width: 0;
-      }
     }
   }
 

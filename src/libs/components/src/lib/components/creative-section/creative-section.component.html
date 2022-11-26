@@ -1,16 +1,13 @@
 <div #container class="container" style="height: 400px">
-  <!-- [style.height]="containerHeight + 'px'"" -->
   <div
     #left
     id="left"
     class="side"
-    [style.max-width]="animating ? '100%' : leftWidth + 'px'"
-    [style.animation]="
-      'creativeSlide' + (scrolledIntoView ? 'In' : 'Out') + ' 1s forwards'
+    [style.width]="
+      containerInView ? (animating ? '100%' : leftWidth + 'px') : '0'
     "
-    [style.animation-play-state]="
-      (animating ? 'running' : 'paused') + ' !important'
-    "
+    [style.transition-duration]="animating ? '1s' : '0s'"
+    [style.transition-delay]="animating ? '2s' : '0s'"
   >
     <h1 class="word">Innovative</h1>
   </div>
