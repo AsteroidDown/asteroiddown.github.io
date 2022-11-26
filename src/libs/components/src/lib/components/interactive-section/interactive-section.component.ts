@@ -109,7 +109,5 @@ export class InteractiveSectionComponent implements AfterViewInit {
         this.boxes[i].push(true);
       }
     }
-
-    console.log(this.boxes);
   }
 }

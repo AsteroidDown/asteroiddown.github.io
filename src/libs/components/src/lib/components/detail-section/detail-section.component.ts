@@ -7,11 +7,11 @@ import {
 } from "@angular/core";
 
 @Component({
-  selector: "test-section",
-  templateUrl: "./test-section.component.html",
-  styleUrls: ["./test-section.component.scss"],
+  selector: "detail-section",
+  templateUrl: "./detail-section.component.html",
+  styleUrls: ["./detail-section.component.scss"],
 })
-export class TestSectionComponent implements OnInit {
+export class DetailSectionComponent implements OnInit {
   @ViewChild("messageBox") private messageBox?: ElementRef<HTMLDivElement>;
 
   @ViewChild("container") private container?: ElementRef<HTMLDivElement>;
