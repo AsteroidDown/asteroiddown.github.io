@@ -16,16 +16,10 @@
     </div>
   </div>
 
-  <p
-    [style.animation]="(allOff ? 'fadeOutLeft' : 'fadeInLeft') + ' 2s forwards'"
-  >
+  <p [style.animation]="(allOff ? 'fadeOutDown' : 'fadeInUp') + ' 2s forwards'">
     Interactive
   </p>
-  <p
-    [style.animation]="
-      (allOff ? 'fadeInRight' : 'fadeOutRight') + ' 2s forwards'
-    "
-  >
+  <p [style.animation]="(allOff ? 'fadeInUp' : 'fadeOutDown') + ' 2s forwards'">
     Cool, huh?
   </p>
 </div>

@@ -22,6 +22,7 @@ export class InteractiveSectionComponent implements AfterViewInit {
 
   time = 30;
   allOff = false;
+
   oi: number = 0;
   oj: number = 0;
   boxes: [boolean[]] = [[]];
