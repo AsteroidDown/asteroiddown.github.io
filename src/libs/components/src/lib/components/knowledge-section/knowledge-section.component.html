@@ -1,0 +1,21 @@
+<div #container class="container" style="height: 400px">
+  <div class="top">
+    <h1>I have experience with:</h1>
+  </div>
+  <div class="bottom">
+    <div class="shadow-left"></div>
+    <div class="images">
+      <div
+        *ngFor="let image of images; index as index"
+        class="image"
+        [style.top]="index % 2 ? '70%' : '28%'"
+        [style.animation-delay]="index * 2 + 's !important'"
+        [style.animation-duration]="images.length * 2 + 's'"
+        [style.animation-play-state]="containerInView ? 'running' : 'paused'"
+      >
+        <img [src]="image" />
+      </div>
+    </div>
+    <div class="shadow-right"></div>
+  </div>
+</div>

@@ -7,6 +7,7 @@ import {
   InteractiveSectionComponent,
   CreativeSectionComponent,
   DetailSectionComponent,
+  KnowledgeSectionComponent,
 } from "./components";
 
 @NgModule({
@@ -15,6 +16,7 @@ import {
     SectionOneComponent,
     DetailSectionComponent,
     CreativeSectionComponent,
+    KnowledgeSectionComponent,
     InteractiveSectionComponent,
     TestSectionComponent,
   ],
@@ -24,6 +26,7 @@ import {
     SectionOneComponent,
     DetailSectionComponent,
     CreativeSectionComponent,
+    KnowledgeSectionComponent,
     InteractiveSectionComponent,
     TestSectionComponent,
   ],

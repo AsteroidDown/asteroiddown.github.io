@@ -30,7 +30,7 @@ export class CreativeSectionComponent {
         setTimeout(() => {
           this.animating = false;
           this.leftWidth = window.innerWidth;
-        }, 3000);
+        }, 2000);
       }
     }
   }

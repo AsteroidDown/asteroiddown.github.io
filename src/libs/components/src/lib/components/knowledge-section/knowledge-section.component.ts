@@ -7,11 +7,11 @@ import {
 } from "@angular/core";
 
 @Component({
-  selector: "test-section",
-  templateUrl: "./test-section.component.html",
-  styleUrls: ["./test-section.component.scss"],
+  selector: "knowledge-section",
+  templateUrl: "./knowledge-section.component.html",
+  styleUrls: ["./knowledge-section.component.scss"],
 })
-export class TestSectionComponent implements OnInit {
+export class KnowledgeSectionComponent {
   @ViewChild("container") private container?: ElementRef<HTMLDivElement>;
   containerInView = false;
 
@@ -30,25 +30,12 @@ export class TestSectionComponent implements OnInit {
   @HostListener("window:scroll", ["$event"])
   @HostListener("window:loadeddata", ["$event"])
   scrolledIntoView() {
+    console.log(this.container);
     if (this.container && !this.containerInView) {
       const rect = this.container.nativeElement.getBoundingClientRect();
       const topShown = rect.top >= 0;
       const bottomShown = rect.bottom <= window.innerHeight;
-      this.containerInView = topShown && bottomShown;
+      this.containerInView = topShown || bottomShown;
     }
-  }
-
-  loop() {
-    // this.boxPositions = this.boxPositions.map((pos) =>
-    //   pos <= -20 ? 130 : pos - 1
-    // );
-    // console.log(this.boxPositions);
-    // setTimeout(() => {
-    //   // this.loop();
-    // }, 500);
-  }
-
-  ngOnInit() {
-    this.loop();
   }
 }

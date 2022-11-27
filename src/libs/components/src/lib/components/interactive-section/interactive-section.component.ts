@@ -46,7 +46,7 @@ export class InteractiveSectionComponent implements AfterViewInit {
   calculateBoxes() {
     this.rows = 0;
     this.columns = 0;
-    this.boxLength = 40;
+    this.boxLength = 80;
     this.containerHeight = 400;
 
     this.rowsList = [];
@@ -60,7 +60,7 @@ export class InteractiveSectionComponent implements AfterViewInit {
       (containerRect?.width % this.boxLength) / Math.floor(this.columns);
     this.columns = containerRect?.width / this.boxLength;
 
-    this.containerHeight = 10 * this.boxLength + 10;
+    this.containerHeight = 5 * this.boxLength + 12;
     this.rows = Math.round(containerRect?.height / this.boxLength);
 
     for (let i = 0; i < this.rows; i++) this.rowsList.push(i);

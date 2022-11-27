@@ -1,18 +1,23 @@
-<div
-  #container
-  class="container"
-  style="height: 400px"
-  (mousemove)="!animating && containerInView ? expand(-1, $event) : ''"
-  (mouseleave)="!animating && containerInView ? expand(-1, $event) : ''"
->
-  <div #messageBox class="message-box">
-    <h1
-      *ngFor="let letter of messageArr; index as index"
-      [style.font-size]="heights[index] + 'px'"
-      [style.margin-right]="index === 6 ? '4px' : '0.5px'"
-      [style.transition]="'font-size ' + (animating ? '0.5s' : '0.25s')"
-    >
-      {{ letter }}
-    </h1>
+<p>{{ containerInView }}</p>
+<div #container class="container" style="height: 400px">
+  <div class="left">
+    <h1>I have experience with:</h1>
+  </div>
+  <div class="right">
+    <div class="shadow-left"></div>
+    <div class="boxes">
+      <div
+        *ngFor="let image of images; index as index"
+        class="box"
+        [style.top]="index % 2 ? '66%' : '33%'"
+        [style.animation-delay]="index * 1.5 + 's !important'"
+        [style.animation-duration]="images.length * 1.5 + 's'"
+      >
+        <!-- [style.animation-play-state]="containerInView ? 'running' : 'paused'" -->
+
+        <img [src]="image" />
+      </div>
+    </div>
+    <div class="shadow-right"></div>
   </div>
 </div>
