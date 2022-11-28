@@ -1,6 +1,5 @@
 .container {
   width: 100%;
-  margin-top: 4px;
   position: relative;
 
   p {
@@ -8,8 +7,11 @@
   }
 
   .text-box-left {
-    margin: 64px;
+    top: 64px;
+    left: 64px;
+    height: 100%;
     display: flex;
+    position: absolute;
 
     .text2 {
       color: #fe7701;
@@ -74,7 +76,6 @@
   }
 
   .text-box-right {
-    margin: 64px;
     display: flex;
     justify-content: flex-end;
   }

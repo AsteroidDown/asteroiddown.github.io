@@ -45,18 +45,16 @@ export class DetailSectionComponent implements OnInit {
   }
 
   async loop() {
-    await new Promise(() => {
-      setTimeout(() => {
-        if (this.index < this.message.length) {
-          this.expand(this.index);
-          this.index++;
-          this.loop();
-        } else {
-          this.expand(-6);
-          setTimeout(() => (this.animating = false), 1000);
-        }
-      }, 100);
-    });
+    setTimeout(() => {
+      if (this.index < this.message.length) {
+        this.expand(this.index);
+        this.index++;
+        this.loop();
+      } else {
+        this.expand(-6);
+        setTimeout(() => (this.animating = false), 1000);
+      }
+    }, 100);
   }
 
   expand(index: number, event?: MouseEvent) {

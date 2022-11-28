@@ -30,7 +30,6 @@ export class KnowledgeSectionComponent {
   @HostListener("window:scroll", ["$event"])
   @HostListener("window:loadeddata", ["$event"])
   scrolledIntoView() {
-    console.log(this.container);
     if (this.container && !this.containerInView) {
       const rect = this.container.nativeElement.getBoundingClientRect();
       const topShown = rect.top >= 0;

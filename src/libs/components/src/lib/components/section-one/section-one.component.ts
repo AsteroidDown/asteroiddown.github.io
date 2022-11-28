@@ -43,23 +43,21 @@ export class SectionOneComponent implements OnInit {
   }
 
   async lineOneLoop() {
-    await new Promise(() =>
-      setTimeout(
-        () => {
-          if (this.index < 30) {
-            this.text1 += this.lineOne[this.index];
-          } else if (this.index < 33) {
-            this.text2 += this.lineOne[this.index];
-          } else {
-            this.text3 += this.lineOne[this.index];
-          }
-          this.index++;
+    setTimeout(
+      () => {
+        if (this.index < 30) {
+          this.text1 += this.lineOne[this.index];
+        } else if (this.index < 33) {
+          this.text2 += this.lineOne[this.index];
+        } else {
+          this.text3 += this.lineOne[this.index];
+        }
+        this.index++;
 
-          if (this.index < this.lineOne.length) this.lineOneLoop();
-          else setTimeout(() => (this.finishedLineOne = true), 2000);
-        },
-        this.index === 0 ? 1000 : this.index === 15 ? 1000 : 30
-      )
+        if (this.index < this.lineOne.length) this.lineOneLoop();
+        else setTimeout(() => (this.finishedLineOne = true), 2000);
+      },
+      this.index === 0 ? 1000 : this.index === 15 ? 1000 : 30
     );
   }
 
