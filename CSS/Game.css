@@ -28,7 +28,7 @@
   	margin: auto;
 	min-width: 30%;
 	height: auto;
-	max-height: 300px;
+	max-height: 100%;
 	object-fit: cover;
 	opacity: 100%;
 }
