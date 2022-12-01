@@ -30,27 +30,17 @@ export class AppComponent implements AfterViewInit {
   knowledgeTop = 0;
 
   @HostListener("window:scroll", ["$event"])
-  startTheShow() {
-    if (this.scrolling) return;
-    this.scrolling = true;
+  startTheShow(event: any) {
+    setTimeout(() => {
+      if (this.scrolling) return;
+      this.scrolling = true;
 
-    const scrollPos = window.scrollY;
-    console.log(
-      scrollPos,
-      this.welcomeTop,
-      this.sectionOneTop,
-      this.creativeTop,
-      this.detailTop,
-      this.interactiveTop,
-      this.knowledgeTop
-    );
+      if (window.scrollY >= this.prevScroll) {
+        this.scrollDown(window.scrollY);
+      } else this.scrollUp(window.scrollY);
 
-    window.scrollTo({ top: scrollPos, behavior: "smooth" });
-    if (scrollPos > this.prevScroll) {
-      this.scrollDown(scrollPos);
-    } else this.scrollUp(scrollPos);
-
-    setTimeout(() => (this.scrolling = false), 1000);
+      setTimeout(() => (this.scrolling = false), event ? 1000 : 0);
+    });
   }
 
   scrollDown(scrollPos: number) {
@@ -65,7 +55,6 @@ export class AppComponent implements AfterViewInit {
     } else if (scrollPos <= this.knowledgeTop) {
       this.prevScroll = this.knowledgeTop;
     }
-    console.log("Scroll to:", this.prevScroll);
     window.scrollTo({ top: this.prevScroll, behavior: "smooth" });
   }
 
@@ -83,7 +72,6 @@ export class AppComponent implements AfterViewInit {
     } else {
       this.prevScroll = this.welcomeTop;
     }
-    console.log("Scroll to:", this.prevScroll);
     window.scrollTo({ top: this.prevScroll, behavior: "smooth" });
   }
 

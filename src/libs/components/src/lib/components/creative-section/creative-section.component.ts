@@ -30,7 +30,7 @@ export class CreativeSectionComponent {
         setTimeout(() => {
           this.animating = false;
           this.leftWidth = window.innerWidth;
-        }, 2000);
+        }, 1500);
       }
     }
   }
@@ -38,5 +38,11 @@ export class CreativeSectionComponent {
   @HostListener("mousemove", ["$event"])
   mouseMove(mouseEvent: MouseEvent) {
     if (!this.animating && this.containerInView) this.leftWidth = mouseEvent.x;
+  }
+
+  @HostListener("touchmove", ["$event"])
+  touchMove(touchEvent: TouchEvent) {
+    if (!this.animating && this.containerInView)
+      this.leftWidth = touchEvent.changedTouches[0].clientX;
   }
 }

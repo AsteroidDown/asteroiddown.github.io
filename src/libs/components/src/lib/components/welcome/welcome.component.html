@@ -26,5 +26,6 @@
     [style.animation]="(inAnimation ? 'boxIn 2' : 'boxOut 1') + 's forwards'"
     [style.top]="height / 2 + 42 + 'px'"
     [style.left]="messagePosition - 32 + 'px'"
+    (click)="scrollToBottom()"
   ></div>
 </div>

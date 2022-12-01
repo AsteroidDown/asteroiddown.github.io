@@ -4,6 +4,7 @@
   style="height: 400px"
   (mousemove)="!animating && containerInView ? expand(-1, $event) : ''"
   (mouseleave)="!animating && containerInView ? expand(-1, $event) : ''"
+  (touchmove)="touchMove($event)"
 >
   <div #messageBox class="message-box">
     <h1

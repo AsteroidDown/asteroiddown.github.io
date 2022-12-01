@@ -6,7 +6,10 @@
   .top {
     flex: 2;
     position: relative;
-    background-color: #000000;
+
+    @media screen and (max-width: 600px) {
+      flex: 1;
+    }
 
     h1 {
       top: 50%;
@@ -50,6 +53,11 @@
           }
         }
 
+        @media screen and (max-width: 600px) {
+          width: 80px;
+          height: 80px;
+        }
+
         img {
           max-width: 100%;
           max-height: 100%;
@@ -58,29 +66,31 @@
       }
 
       .image:hover {
-        width: 160px;
-        height: 160px;
+        @media screen and (max-width: 700px) {
+          width: 100px;
+          height: 100px;
+        }
       }
     }
 
     .shadow-left {
       z-index: 2;
-      width: 100px;
+      width: 25%;
       height: 100%;
       position: absolute;
       pointer-events: none;
-      background: linear-gradient(90deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+      background: linear-gradient(90deg, #0c0b0b 0%, rgba(0, 0, 0, 0) 100%);
     }
 
     .shadow-right {
       top: 0;
       right: 0;
       z-index: 2;
-      width: 100px;
+      width: 25%;
       height: 100%;
       position: absolute;
       pointer-events: none;
-      background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #0c0b0b 100%);
     }
   }
 }

@@ -35,6 +35,10 @@ export class WelcomeComponent implements OnInit, AfterViewInit {
     }
   }
 
+  scrollToBottom() {
+    window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+  }
+
   ngOnInit(): void {
     this.height = window.innerHeight;
   }

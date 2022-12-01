@@ -105,6 +105,8 @@ export class DetailSectionComponent implements OnInit {
     }
   }
 
+  touchMove(event: TouchEvent) {}
+
   ngOnInit() {
     for (let i = 0; i < this.message.length; i++) {
       this.messageArr.push(this.message.charAt(i));
