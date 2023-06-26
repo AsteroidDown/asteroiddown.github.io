@@ -1,8 +1,7 @@
 <router-outlet></router-outlet>
 
-<welcome #welcome></welcome>
-<section-one #sectionOne></section-one>
-<creative-section #creative></creative-section>
-<detail-section #detail></detail-section>
-<interactive-section #interactive></interactive-section>
-<knowledge-section #knowledge></knowledge-section>
+<div style="display: flex">
+  <experience-card [name]="'VectorSolv'"></experience-card>
+  <experience-card [name]="'Kids Great Minds'"></experience-card>
+  <experience-card [name]="'Environment Canada'"></experience-card>
+</div>
