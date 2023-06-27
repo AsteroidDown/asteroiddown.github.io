@@ -1,0 +1,87 @@
+.nav-container {
+  z-index: 10;
+  position: absolute;
+  display: flex;
+
+  transition: all 350ms ease;
+
+  .nav {
+    width: 25vw;
+    height: 100vh;
+
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    background-color: rgb(var(--blue));
+
+    .title {
+      font-size: 3vw;
+      line-height: 3vw;
+      font-weight: 500;
+    }
+
+    .sections {
+      margin-top: -10%;
+      display: flex;
+      flex-direction: column;
+
+      font-size: 2vw;
+      line-height: 5vw;
+      font-weight: 400;
+      text-decoration: underline;
+    }
+  }
+}
+
+.nav-background {
+  z-index: 9;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+
+  backdrop-filter: blur(3px);
+  background-color: rgb(var(--blue), 20%);
+
+  pointer-events: none;
+
+  transition: all 350ms ease;
+}
+
+.nav-button {
+  position: absolute;
+  z-index: 11;
+  bottom: 0;
+  left: 0;
+
+  margin: 24px 36px;
+
+  width: 64px;
+  height: 64px;
+
+  border-radius: 100%;
+  border: none;
+
+  box-shadow: 0 0 8px 3px rgb(var(--gray), 20%);
+  background: linear-gradient(
+    rgb(var(--blue)),
+    rgb(var(--blue)) 30%,
+    rgb(var(--orange)) 50%,
+    rgb(var(--orange)) 80%,
+    rgb(var(--blue)) 100%
+  );
+  background-size: 100% 200%;
+
+  transition: all 350ms ease;
+}
+
+.nav-button:hover {
+  margin-left: 34px;
+  margin-bottom: 22px;
+  width: 68px;
+  height: 68px;
+  background-position: 100% 100%;
+}

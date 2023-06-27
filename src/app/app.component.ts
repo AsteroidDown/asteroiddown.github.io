@@ -12,6 +12,7 @@ import {
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent {
+  showNav = false;
   // implements AfterViewInit
   // @ViewChild("welcome") welcome?: ElementRef;
   // @ViewChild("sectionOne") sectionOne?: ElementRef;

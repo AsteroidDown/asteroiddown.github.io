@@ -1,3 +1,25 @@
 <router-outlet></router-outlet>
 
-<experience></experience>
+<button
+  class="nav-button"
+  [style.background-position]="showNav ? '100% 100%' : ''"
+  (click)="showNav = !showNav"
+></button>
+
+<div class="nav-container" [style.left]="showNav ? '0' : '-100%'">
+  <div class="nav">
+    <span class="title">Jasper Stahmer</span>
+
+    <div class="sections">
+      <span class="label">Work Experience</span>
+      <span class="label">Work Experience</span>
+    </div>
+
+    <span class="footer"></span>
+  </div>
+</div>
+<div class="nav-background" [style.opacity]="showNav ? '1' : '0'"></div>
+
+<div class="content">
+  <experience></experience>
+</div>
