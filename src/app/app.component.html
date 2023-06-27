@@ -4,7 +4,21 @@
   class="nav-button"
   [style.background-position]="showNav ? '100% 100%' : ''"
   (click)="showNav = !showNav"
-></button>
+>
+  <div
+    class="line"
+    [style]="
+      showNav ? 'transform: translate(-50%, -50%) rotate(225deg)' : 'top: 35%'
+    "
+  ></div>
+  <div class="line" [style]="showNav ? 'opacity: 0;' : 'opacity: 1'"></div>
+  <div
+    class="line"
+    [style]="
+      showNav ? 'transform: translate(-50%, -50%) rotate(315deg)' : 'top: 65%'
+    "
+  ></div>
+</button>
 
 <div class="nav-container" [style.left]="showNav ? '0' : '-100%'">
   <div class="nav">
@@ -21,5 +35,6 @@
 <div class="nav-background" [style.opacity]="showNav ? '1' : '0'"></div>
 
 <div class="content">
-  <experience></experience>
+  <welcome></welcome>
+  <experience style="padding: 32px"></experience>
 </div>

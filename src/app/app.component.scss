@@ -1,6 +1,7 @@
 .nav-container {
+  position: fixed;
+
   z-index: 10;
-  position: absolute;
   display: flex;
 
   transition: all 350ms ease;
@@ -38,8 +39,9 @@
 }
 
 .nav-background {
+  position: fixed;
+
   z-index: 9;
-  position: absolute;
   width: 100vw;
   height: 100vh;
 
@@ -52,12 +54,13 @@
 }
 
 .nav-button {
-  position: absolute;
+  position: fixed;
   z-index: 11;
   bottom: 0;
   left: 0;
 
   margin: 24px 36px;
+  cursor: pointer;
 
   width: 64px;
   height: 64px;
@@ -76,6 +79,24 @@
   background-size: 100% 200%;
 
   transition: all 350ms ease;
+
+  .line {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    width: 36px;
+    height: 6px;
+
+    border-radius: 3px;
+
+    background-color: rgb(var(--gray), 60%);
+
+    transform: translate(-50%, -50%);
+
+    transition: all 350ms ease;
+  }
 }
 
 .nav-button:hover {
@@ -84,4 +105,8 @@
   width: 68px;
   height: 68px;
   background-position: 100% 100%;
+
+  .line {
+    background-color: rgb(var(--gray));
+  }
 }
