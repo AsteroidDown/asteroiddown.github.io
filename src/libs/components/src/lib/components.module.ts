@@ -9,6 +9,7 @@ import {
   DetailSectionComponent,
   KnowledgeSectionComponent,
   ExperienceCardComponent,
+  ExperienceComponent,
 } from "./components";
 
 @NgModule({
@@ -21,6 +22,7 @@ import {
     InteractiveSectionComponent,
     TestSectionComponent,
 
+    ExperienceComponent,
     ExperienceCardComponent,
   ],
   imports: [CommonModule],
@@ -33,6 +35,7 @@ import {
     InteractiveSectionComponent,
     TestSectionComponent,
 
+    ExperienceComponent,
     ExperienceCardComponent,
   ],
 })

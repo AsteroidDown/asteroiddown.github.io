@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="modal-container">
+    <!-- <div class="left-fade"></div> -->
+
+    <div class="modal" [style.left]="selectedCard ? '100%' : '0'">
+      <experience-card
+        *ngFor="let card of cards"
+        [name]="card.name"
+        (click)="selectCard(card)"
+      ></experience-card>
+    </div>
+
+    <!-- <div class="right-fade"></div> -->
+  </div>
+
+  <div class="details" [style.left]="selectedCard ? '0' : '-100%'">
+    <div class="details-container">
+      <div class="details-header">
+        <span class="name">{{ selectedCard?.name }}</span>
+
+        <div class="close" (click)="clearCard()">
+          <div
+            class="line"
+            style="transform: translate(-50%, -50%) rotate(315deg)"
+          ></div>
+          <div
+            class="line"
+            style="transform: translate(-50%, -50%) rotate(45deg)"
+          ></div>
+        </div>
+      </div>
+
+      <div class="divide"></div>
+    </div>
+  </div>
+</div>

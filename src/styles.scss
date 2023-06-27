@@ -37,7 +37,7 @@ $asteroiddown-theme: mat.define-light-theme(
 /* You can add global styles to this file, and also import other style files */
 body {
   color: white;
-  background-color: #171616;
+  background-color: rgb(var(--gray));
 }
 
 html,
@@ -52,4 +52,5 @@ body {
 :root {
   --orange: 254, 137, 1;
   --blue: 115, 185, 255;
+  --gray: 23, 22, 22;
 }
