@@ -54,7 +54,7 @@
   width: 100vw;
   height: 80vh;
 
-  margin: 32px;
+  margin: 32px 0;
 
   display: flex;
   justify-content: center;
@@ -65,6 +65,9 @@
     width: 80vw;
     height: 60vh;
 
+    display: flex;
+    flex-direction: column;
+
     border-radius: 1rem;
     background-color: rgb(var(--blue), 5%);
     border: 3px solid rgb(var(--blue), 80%);
@@ -72,16 +75,23 @@
     .details-header {
       padding: 24px 32px;
       display: flex;
+      min-height: 48px;
       justify-content: space-between;
 
       .name {
         align-self: center;
         font-size: 3vw;
         line-height: 3vw;
-        font-weight: 400;
+        font-weight: 500;
+
+        @media screen and (max-width: 600px) {
+          font-size: 8vw;
+          line-height: 8vw;
+        }
       }
 
       .close {
+        margin-right: 2px;
         align-self: center;
         width: 40px;
         height: 40px;
@@ -104,6 +114,9 @@
       }
 
       .close:hover {
+        margin-right: 0;
+        width: 44px;
+        height: 44px;
         background-color: rgb(var(--orange));
 
         .line {
@@ -115,6 +128,59 @@
     .divide {
       width: 100%;
       border: 1px solid rgb(var(--blue), 80%);
+    }
+
+    .details-content {
+      height: 100%;
+      display: flex;
+
+      .info {
+        flex: 1;
+        padding: 48px;
+
+        font-size: 1.5vw;
+        line-height: 2vw;
+        font-weight: 300;
+
+        gap: 12px;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width: 600px) {
+          font-size: 6vw;
+          line-height: 6vw;
+        }
+
+        .title {
+          display: flex;
+
+          justify-content: space-between;
+
+          .position {
+            font-weight: 400;
+            color: rgb(var(--orange));
+          }
+
+          .time {
+            color: rgb(var(--orange));
+          }
+        }
+      }
+
+      .logo {
+        flex: 1;
+        height: 100%;
+
+        display: flex;
+        justify-content: center;
+
+        img {
+          align-self: center;
+          width: 80%;
+          height: 80%;
+          object-fit: contain;
+        }
+      }
     }
   }
 }

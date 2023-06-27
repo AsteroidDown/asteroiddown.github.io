@@ -13,4 +13,5 @@ import {
 })
 export class ExperienceCardComponent {
   @Input() name?: string;
+  @Input() url?: string;
 }

@@ -26,7 +26,15 @@
     width: 100%;
     height: 55%;
 
-    transition: height 350ms ease;
+    display: flex;
+    justify-content: center;
+
+    img {
+      align-self: center;
+      width: 80%;
+      height: 80%;
+      object-fit: contain;
+    }
   }
 
   .details {
