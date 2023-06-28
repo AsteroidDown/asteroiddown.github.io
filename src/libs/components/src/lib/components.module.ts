@@ -10,7 +10,7 @@ import {
   KnowledgeSectionComponent,
   ExperienceCardComponent,
   ExperienceComponent,
-  TitleComponent,
+  EducationComponent,
 } from "./components";
 
 @NgModule({
@@ -24,9 +24,9 @@ import {
     InteractiveSectionComponent,
     TestSectionComponent,
 
-    TitleComponent,
     ExperienceComponent,
     ExperienceCardComponent,
+    EducationComponent,
   ],
   exports: [
     WelcomeComponent,
@@ -37,9 +37,9 @@ import {
     InteractiveSectionComponent,
     TestSectionComponent,
 
-    TitleComponent,
     ExperienceComponent,
     ExperienceCardComponent,
+    EducationComponent,
   ],
 })
 export class ComponentsModule {}

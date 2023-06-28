@@ -51,10 +51,12 @@ export class ExperienceComponent {
   ];
 
   selectCard(card: ExperienceCard) {
+    this.showDetails = true;
     this.selectedCard = card;
   }
 
   clearCard() {
-    this.selectedCard = null;
+    this.showDetails = false;
+    setTimeout(() => (this.selectedCard = null), 500);
   }
 }
