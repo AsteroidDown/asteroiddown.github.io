@@ -7,3 +7,4 @@ export * from "./detail-section/detail-section.component";
 export * from "./knowledge-section/knowledge-section.component";
 export * from "./experience-card/experience-card.component";
 export * from "./experience/experience.component";
+export * from "./title/title.component";
