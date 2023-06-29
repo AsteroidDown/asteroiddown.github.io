@@ -18,10 +18,6 @@
 
   transition: all 350ms ease;
 
-  @media screen and (max-width: 600px) {
-    width: 80vw;
-  }
-
   .logo {
     width: 100%;
     height: 55%;
@@ -54,10 +50,31 @@
       font-size: 2.75vw;
       line-height: 3vw;
       font-weight: 400;
+    }
+  }
 
-      @media screen and (max-width: 600px) {
-        font-size: 8vw;
+  @media screen and (max-width: 600px) {
+    width: 90vw;
+    height: 96px;
+
+    flex-direction: row;
+    aspect-ratio: auto;
+
+    .logo {
+      flex: 1;
+      margin: 12px;
+      align-self: center;
+    }
+
+    .details {
+      flex: 3;
+      align-self: center;
+
+      .name {
+        margin-top: 12px;
+        font-size: 6vw;
         line-height: 8vw;
+        text-align: start;
       }
     }
   }
@@ -92,6 +109,10 @@
 
   transition: all 350ms ease;
   animation: pan-overlay 22s infinite linear;
+
+  @media screen and (max-width: 600px) {
+    opacity: 1;
+  }
 }
 
 .background:hover {

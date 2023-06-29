@@ -41,13 +41,34 @@
   font-weight: 400;
 
   .content {
-    flex: 3;
+    flex: 1;
     margin: 24px 64px;
 
     .heading {
       font-size: 2vw;
       line-height: 2vw;
       font-weight: 500;
+    }
+
+    .degree {
+      display: flex;
+      justify-content: space-between;
+
+      p {
+        font-size: 1.75vw;
+        line-height: 2vw;
+        font-weight: 500;
+        color: rgb(var(--orange));
+      }
+
+      i {
+        margin-top: 2px;
+        color: rgb(var(--blue));
+
+        font-size: 1.3vw;
+        line-height: 1.5vw;
+        font-weight: 300;
+      }
     }
 
     .sub-heading {
@@ -57,6 +78,13 @@
       font-size: 1.5vw;
       line-height: 1.5vw;
       font-weight: 400;
+    }
+
+    .grid {
+      display: grid;
+      margin-left: 12px;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 12px;
     }
 
     .divide {
@@ -73,20 +101,59 @@
         rgb(var(--orange)) 75%
       );
     }
+  }
 
-    .time {
-      margin-top: 2px;
-      align-self: center;
-      color: rgb(var(--blue));
+  @media screen and (max-width: 600px) {
+    font-size: 4vw;
+    line-height: 5vw;
+    font-weight: 400;
 
-      font-size: 1.5vw;
-      line-height: 1.5vw;
-      font-weight: 300;
+    .content {
+      margin: 24px 24px;
+
+      .heading {
+        font-size: 6vw;
+      }
+
+      .degree {
+        margin-bottom: 12px;
+        flex-direction: column;
+        justify-content: start;
+
+        p {
+          font-size: 5vw;
+          line-height: 5vw;
+        }
+
+        i {
+          font-size: 4vw;
+          line-height: 4vw;
+        }
+      }
+
+      .divide {
+        margin: 24px -12px;
+        padding: 0 12px;
+      }
+
+      .sub-heading {
+        margin-top: 24px;
+        color: rgb(var(--blue));
+
+        font-size: 4vw;
+        line-height: 5vw;
+        font-weight: 400;
+      }
+
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
   }
 
   .image-container {
-    flex: 2;
+    margin: 0 64px 0 36px;
+    max-width: 300px;
     display: flex;
     justify-content: center;
 
@@ -104,6 +171,10 @@
       img:hover {
         box-shadow: 0 0 12px 6px;
       }
+    }
+
+    @media screen and (max-width: 600px) {
+      display: none;
     }
   }
 }

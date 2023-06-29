@@ -35,6 +35,8 @@
 
 .container {
   position: relative;
+  min-height: 80vh;
+  overflow: hidden;
 }
 
 .modal-container {
@@ -44,8 +46,6 @@
   .modal {
     position: absolute;
     top: 0;
-
-    padding: 0 24px;
 
     gap: 24px;
     display: flex;
@@ -82,10 +82,16 @@
     background-color: rgb(var(--blue), 5%);
     border: 3px solid rgb(var(--blue), 80%);
 
+    @media screen and (max-width: 600px) {
+      width: 90vw;
+      height: 70vh;
+    }
+
     .details-header {
       padding: 24px 32px;
       display: flex;
       min-height: 48px;
+      gap: 8px;
       justify-content: space-between;
 
       .name {
@@ -95,7 +101,7 @@
         font-weight: 500;
 
         @media screen and (max-width: 600px) {
-          font-size: 8vw;
+          font-size: 6vw;
           line-height: 8vw;
         }
       }
@@ -145,21 +151,16 @@
       display: flex;
 
       .info {
-        flex: 1;
-        padding: 48px;
+        flex: 3;
+        padding: 24px 48px;
 
-        font-size: 1.5vw;
+        font-size: 2vw;
         line-height: 2vw;
         font-weight: 300;
 
         gap: 12px;
         display: flex;
         flex-direction: column;
-
-        @media screen and (max-width: 600px) {
-          font-size: 6vw;
-          line-height: 6vw;
-        }
 
         .title {
           display: flex;
@@ -172,13 +173,41 @@
           }
 
           .time {
+            font-size: 1.75vw;
             color: rgb(var(--orange));
+          }
+        }
+
+        .point {
+          font-size: 2vw;
+          line-height: 2.5vw;
+          font-weight: 300;
+        }
+
+        @media screen and (max-width: 600px) {
+          padding: 24px;
+
+          font-size: 5vw;
+          line-height: 6vw;
+
+          .title {
+            // flex-direction: column;
+            gap: 8px;
+
+            .time {
+              font-size: 4vw;
+            }
+          }
+
+          .point {
+            font-size: 5vw;
+            line-height: 7vw;
           }
         }
       }
 
       .logo {
-        flex: 1;
+        flex: 2;
         height: 100%;
 
         display: flex;
@@ -189,6 +218,10 @@
           width: 80%;
           height: 80%;
           object-fit: contain;
+        }
+
+        @media screen and (max-width: 600px) {
+          display: none;
         }
       }
     }
