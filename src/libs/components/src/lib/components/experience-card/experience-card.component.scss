@@ -1,5 +1,5 @@
 .container {
-  width: 26vw;
+  width: 25vw;
   max-height: 80vh;
 
   z-index: 1;
@@ -39,7 +39,7 @@
 
   .details {
     width: 100%;
-    height: 65%;
+    height: 45%;
 
     display: flex;
     flex-direction: column;
@@ -50,7 +50,8 @@
     .name {
       padding: 0 16px;
       text-align: center;
-      font-size: 3vw;
+
+      font-size: 2.75vw;
       line-height: 3vw;
       font-weight: 400;
 

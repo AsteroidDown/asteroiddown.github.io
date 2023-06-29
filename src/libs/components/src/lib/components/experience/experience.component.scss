@@ -33,32 +33,6 @@
   }
 }
 
-.tube {
-  display: flex;
-  position: absolute;
-
-  top: 0;
-  left: 0;
-
-  width: 100%;
-  height: 100%;
-
-  .tube-section {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-}
-
-@keyframes slide {
-  from {
-    left: -300%;
-  }
-  to {
-    left: 300%;
-  }
-}
-
 .container {
   position: relative;
 }
@@ -71,15 +45,16 @@
     position: absolute;
     top: 0;
 
-    display: flex;
-    justify-content: center;
+    padding: 0 24px;
+
     gap: 24px;
+    display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 
     min-width: 100vw;
     max-width: 100vw;
 
-    max-width: 100%;
     transition: all 500ms ease;
   }
 }
