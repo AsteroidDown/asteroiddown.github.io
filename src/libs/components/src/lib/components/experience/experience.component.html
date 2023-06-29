@@ -1,97 +1,29 @@
 <div class="title-container">
   <p class="title">Work Experience</p>
 
-  <div class="tube">
-    <div class="tube-section" style="width: 70%">
-      <div style="height: 90%; border-bottom: 4px solid rgb(var(--blue))"></div>
-      <div style="height: 10%"></div>
-    </div>
+  <pipe
+    [pipe]="{
+      color: 'blue',
+      sections: [
+        { width: 80, h1: 70, h2: 20, y: 'bottom' },
+        { width: 20, h1: 40, h2: 30, y: 'top' }
+      ]
+    }"
+  ></pipe>
 
-    <div class="tube-section" style="width: 10%">
-      <div style="height: 70%"></div>
-      <div
-        style="
-          height: 20%;
-          border-bottom-right-radius: 24px;
-          border-bottom: 4px solid rgb(var(--blue));
-          border-right: 4px solid rgb(var(--blue));
-        "
-      ></div>
-      <div style="height: 10%"></div>
-    </div>
-
-    <div class="tube-section" style="width: 10%; margin-left: -4px">
-      <div style="height: 40%"></div>
-      <div
-        style="
-          height: 30%;
-          border-top-left-radius: 24px;
-          border-top: 4px solid rgb(var(--blue));
-          border-left: 4px solid rgb(var(--blue));
-        "
-      ></div>
-      <div style="height: 30%"></div>
-    </div>
-
-    <div class="tube-section" style="width: 10%">
-      <div
-        style="
-          height: 40%;
-          margin-right: -4px;
-          border-bottom: 4px solid rgb(var(--blue));
-        "
-      ></div>
-      <div style="height: 60%"></div>
-    </div>
-  </div>
-
-  <div class="tube">
-    <div class="tube-section" style="width: 50%">
-      <div
-        style="height: 10%; border-bottom: 4px solid rgb(var(--orange))"
-      ></div>
-      <div style="height: 90%"></div>
-    </div>
-
-    <div class="tube-section" style="width: 10%">
-      <div style="height: 10%"></div>
-      <div
-        style="
-          height: 30%;
-          border-top-right-radius: 24px;
-          border-top: 4px solid rgb(var(--orange));
-          border-right: 4px solid rgb(var(--orange));
-        "
-      ></div>
-      <div style="height: 60%"></div>
-    </div>
-
-    <div class="tube-section" style="width: 10%; margin-left: -4px">
-      <div style="height: 40%"></div>
-      <div
-        style="
-          height: 30%;
-          border-bottom-left-radius: 24px;
-          border-bottom: 4px solid rgb(var(--orange));
-          border-left: 4px solid rgb(var(--orange));
-        "
-      ></div>
-      <div style="height: 30%"></div>
-    </div>
-
-    <div class="tube-section" style="width: 70%">
-      <div
-        style="height: 70%; border-bottom: 4px solid rgb(var(--orange))"
-      ></div>
-      <div style="height: 30%"></div>
-    </div>
-  </div>
+  <pipe
+    [pipe]="{
+      color: 'orange',
+      sections: [
+        { width: 40, h1: 10, h2: 30, y: 'top' },
+        { width: 60, h1: 40, h2: 30, y: 'bottom' }
+      ]
+    }"
+  ></pipe>
 </div>
 
 <div class="container">
   <div class="modal-container">
-    <!-- <div class="left-fade"></div> -->
-
     <div class="modal" [style.left]="showDetails ? '100%' : '0'">
       <experience-card
         *ngFor="let card of cards"
@@ -100,8 +32,6 @@
         (click)="showDetails ? '' : selectCard(card)"
       ></experience-card>
     </div>
-
-    <!-- <div class="right-fade"></div> -->
   </div>
 
   <div class="details" [style.left]="showDetails ? '0' : '-100%'">

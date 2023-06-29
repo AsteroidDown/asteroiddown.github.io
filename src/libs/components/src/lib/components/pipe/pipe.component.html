@@ -1,0 +1,37 @@
+<div *ngIf="pipe" #container class="pipe-container">
+  <div class="cover" [style.width]="containerInView ? '0%' : '100%'"></div>
+
+  <div class="pipe">
+    <div
+      *ngFor="let section of pipe.sections; index as index"
+      class="pipe-section"
+      [style.width]="section.width + '%'"
+    >
+      <div [style.height]="section.h1 + '%'"></div>
+
+      <div
+        style="margin-left: -4px"
+        [style.height]="section.h2 + '%'"
+        [style]="
+          'border-' +
+          section.y +
+          '-' +
+          (index % 2 == 0 ? 'right' : 'left') +
+          '-radius: 24px; ' +
+          'border-' +
+          section.y +
+          ': 4px solid rgb(var(--' +
+          pipe.color +
+          ')); ' +
+          'border-' +
+          (index % 2 == 0 ? 'right' : 'left') +
+          ': 4px solid rgb(var(--' +
+          pipe.color +
+          ')); '
+        "
+      ></div>
+
+      <div [style.height]="100 - section.h1 - (section.h2 || 0) + '%'"></div>
+    </div>
+  </div>
+</div>

@@ -11,6 +11,7 @@ import {
   ExperienceCardComponent,
   ExperienceComponent,
   EducationComponent,
+  PipeComponent,
 } from "./components";
 
 @NgModule({
@@ -27,6 +28,8 @@ import {
     ExperienceComponent,
     ExperienceCardComponent,
     EducationComponent,
+
+    PipeComponent,
   ],
   exports: [
     WelcomeComponent,
@@ -40,6 +43,8 @@ import {
     ExperienceComponent,
     ExperienceCardComponent,
     EducationComponent,
+
+    PipeComponent,
   ],
 })
 export class ComponentsModule {}

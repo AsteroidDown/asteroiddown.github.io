@@ -8,3 +8,4 @@ export * from "./knowledge-section/knowledge-section.component";
 export * from "./experience-card/experience-card.component";
 export * from "./experience/experience.component";
 export * from "./education/education.component";
+export * from "./pipe/pipe.component";
