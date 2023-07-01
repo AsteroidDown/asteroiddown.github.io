@@ -1,83 +1,29 @@
-.title-container {
-  position: relative;
-  min-height: 128px;
-  margin-bottom: 24px;
-
-  .title {
-    z-index: 2;
-    top: 50%;
-    position: absolute;
-
-    transform: translateY(-50%);
-
-    margin-left: 48px;
-    margin-bottom: 32px;
-
-    font-size: 3vw;
-    line-height: 3vw;
-    font-weight: 500;
-
-    transition: all 350ms ease;
-
-    @media screen and (max-width: 600px) {
-      font-size: 8vw;
-      line-height: 8vw;
-      margin-left: 24px;
-    }
-  }
-}
-
-.title-container:hover {
-  .title {
-    text-shadow: 0px 0px 0.5rem white;
-  }
-}
-
 .container {
   display: flex;
-
-  font-size: 1.25vw;
-  line-height: 1.25vw;
-  font-weight: 400;
 
   .content {
     flex: 1;
     margin: 24px 64px;
-
-    .heading {
-      font-size: 2vw;
-      line-height: 2vw;
-      font-weight: 500;
-    }
 
     .degree {
       display: flex;
       justify-content: space-between;
 
       p {
-        font-size: 1.75vw;
-        line-height: 2vw;
-        font-weight: 500;
         color: rgb(var(--orange));
+        font-weight: 400;
       }
 
       i {
         margin-top: 2px;
+        font-size: 20px;
         color: rgb(var(--blue));
-
-        font-size: 1.3vw;
-        line-height: 1.5vw;
-        font-weight: 300;
       }
     }
 
     .sub-heading {
       margin-top: 36px;
       color: rgb(var(--blue));
-
-      font-size: 1.5vw;
-      line-height: 1.5vw;
-      font-weight: 400;
     }
 
     .grid {
@@ -104,10 +50,6 @@
   }
 
   @media screen and (max-width: 600px) {
-    font-size: 4vw;
-    line-height: 5vw;
-    font-weight: 400;
-
     .content {
       margin: 24px 24px;
 
@@ -120,14 +62,9 @@
         flex-direction: column;
         justify-content: start;
 
-        p {
-          font-size: 5vw;
-          line-height: 5vw;
-        }
-
         i {
-          font-size: 4vw;
-          line-height: 4vw;
+          margin-top: -8px;
+          font-size: 16px;
         }
       }
 
@@ -139,10 +76,6 @@
       .sub-heading {
         margin-top: 24px;
         color: rgb(var(--blue));
-
-        font-size: 4vw;
-        line-height: 5vw;
-        font-weight: 400;
       }
 
       .grid {

@@ -1,6 +1,9 @@
-<div *ngIf="pipe" #container class="pipe-container">
-  <div class="cover" [style.width]="containerInView ? '0%' : '100%'"></div>
-
+<div
+  *ngIf="pipe"
+  #container
+  class="pipe-container"
+  [style.width]="containerInView ? '100%' : '0'"
+>
   <div class="pipe">
     <div
       *ngFor="let section of pipe.sections; index as index"
