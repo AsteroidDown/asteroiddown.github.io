@@ -1,0 +1,82 @@
+<div class="title-container">
+  <p class="title">Work Experience</p>
+
+  <pipe
+    [pipe]="{
+      color: 'blue',
+      sections: [
+        { width: 80, h1: 70, h2: 20, y: 'bottom' },
+        { width: 20, h1: 40, h2: 30, y: 'top' }
+      ]
+    }"
+  ></pipe>
+
+  <pipe
+    [pipe]="{
+      color: 'orange',
+      sections: [
+        { width: 40, h1: 10, h2: 30, y: 'top' },
+        { width: 60, h1: 40, h2: 30, y: 'bottom' }
+      ]
+    }"
+  ></pipe>
+</div>
+
+<div class="relative min-h-[80vh] w-screen">
+  <div class="min-h-[50vh]">
+    <div
+      class="flex flex-wrap w-screen justify-center gap-2 absolute transition-all duration-500"
+      [style.left]="showDetails ? '100%' : '0'"
+    >
+      <experience-card
+        *ngFor="let card of cards"
+        [name]="card.name"
+        [url]="card.url"
+        (click)="showDetails ? '' : selectCard(card)"
+      ></experience-card>
+    </div>
+  </div>
+
+  <div
+    class="flex justify-center w-screen min-h-[80vh] absolute top-0 transition-all duration-500"
+    [style.left]="showDetails ? '0' : '-100%'"
+  >
+    <div class="details-container">
+      <div class="details-header">
+        <span class="name sub-title">{{ selectedCard?.name }}</span>
+
+        <div class="close" (click)="clearCard()">
+          <div
+            class="line"
+            style="transform: translate(-50%, -50%) rotate(315deg)"
+          ></div>
+          <div
+            class="line"
+            style="transform: translate(-50%, -50%) rotate(45deg)"
+          ></div>
+        </div>
+      </div>
+
+      <div class="divide"></div>
+
+      <div class="details-content">
+        <div class="info">
+          <div class="title">
+            <span class="position text">{{ selectedCard?.position }}</span>
+            <span class="time text">
+              <i>{{ selectedCard?.time }}</i>
+            </span>
+          </div>
+
+          <span *ngFor="let point of selectedCard?.points" class="point text">
+            {{ point }}
+          </span>
+        </div>
+
+        <div class="logo">
+          <img [src]="selectedCard?.url" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

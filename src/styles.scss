@@ -83,6 +83,72 @@ body {
   font-style: italic;
 }
 
+.title-container {
+  position: relative;
+  min-height: 128px;
+  margin-bottom: 24px;
+
+  .title {
+    z-index: 2;
+    top: 50%;
+    position: absolute;
+
+    font-size: 36px;
+    line-height: 48px;
+    font-weight: 500;
+
+    transform: translateY(-50%);
+
+    margin-left: 48px;
+    margin-bottom: 32px;
+
+    transition: all 350ms ease;
+
+    @media screen and (max-width: 600px) {
+      margin-left: 24px;
+    }
+  }
+}
+
+.title-container:hover {
+  .title {
+    text-shadow: 0px 0px 0.5rem white;
+  }
+}
+
+.sub-title {
+  font-size: 32px;
+  line-height: 36px;
+  font-weight: 500;
+
+  @media screen and (max-width: 600px) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.text {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 300;
+
+  @media screen and (max-width: 600px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.small-text {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 300;
+
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
 :root {
   --white: 255, 255, 255;
   --orange: 255, 100, 0;

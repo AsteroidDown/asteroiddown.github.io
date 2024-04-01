@@ -8,6 +8,7 @@ import {
 
 export interface PipeConfig {
   color: string;
+  width?: number;
 
   sections: PipeSection[];
 }

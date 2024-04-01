@@ -12,6 +12,7 @@ module.exports = {
         'aorange': '#ff6600',
         'ablue': '#73b9ff',
         'apurple': '#ca03fc',
+        'agray': '#171616',
       }
     },
   },

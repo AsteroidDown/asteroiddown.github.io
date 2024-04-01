@@ -13,7 +13,7 @@
       <div [style.height]="section.h1 + '%'"></div>
 
       <div
-        style="margin-left: -4px"
+        [style.margin-left]="'-' + (pipe.width ?? 4) + 'px'"
         [style.height]="section.h2 + '%'"
         [style]="
           'border-' +
@@ -23,12 +23,16 @@
           '-radius: 24px; ' +
           'border-' +
           section.y +
-          ': 4px solid rgb(var(--' +
+          ': ' +
+          (pipe.width ?? 4) +
+          'px solid rgb(var(--' +
           pipe.color +
           ')); ' +
           'border-' +
           (index % 2 == 0 ? 'right' : 'left') +
-          ': 4px solid rgb(var(--' +
+          ': ' +
+          (pipe.width ?? 4) +
+          'px solid rgb(var(--' +
           pipe.color +
           ')); '
         "

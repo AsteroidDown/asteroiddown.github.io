@@ -1,23 +1,7 @@
-<banner></banner>
-<div class="w-full h-[40px]">
-  <pipe
-    [pipe]="{
-        color: 'blue',
-        sections: [
-          { width: 80, h1: 70, h2: 20, y: 'bottom' },
-          { width: 20, h1: 40, h2: 30, y: 'top' }
-        ]
-      }"
-  ></pipe>
+<pipe-background class="fixed"></pipe-background>
 
-  <pipe
-    [pipe]="{
-        color: 'orange',
-        sections: [
-          { width: 40, h1: 10, h2: 30, y: 'top' },
-          { width: 60, h1: 40, h2: 30, y: 'bottom' }
-        ]
-      }"
-  ></pipe>
+<div class="absolute z-10">
+  <banner></banner>
+
+  <experience></experience>
 </div>
-<div class="h-[4000px]"></div>
