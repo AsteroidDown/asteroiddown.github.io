@@ -1,0 +1,44 @@
+<div class="flex justify-center w-full h-[200px]">
+  <div class="flex flex-col flex-1 justify-center gap-2 p-12">
+    <p
+      class="text-7xl font-medium bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent transition-all duration-300 hover:bg-[100%]"
+      style="background-size: 200%"
+    >
+      Jasper Stahmer
+    </p>
+    <div class="flex overflow-y-hidden min-h-10">
+      <div class="flex gap-2 relative">
+        <p class="text-3xl font-normal text-gray-100">A developer who is</p>
+
+        <div
+          class="flex flex-col transition-all absolute left-[260px]"
+          [style.transition-duration]="switching ? '300ms' : '0ms'"
+          [style.margin-top]="switching ? '0px' : '-36px'"
+        >
+          <p
+            class="text-3xl font-normal bg-clip-text text-transparent bg-orange-50"
+            [style]="
+              'background-color: rgb(var(--' + nextDescriptorColor + '))'
+            "
+          >
+            {{ nextDescriptor }}
+          </p>
+          <p
+            class="text-3xl font-normal bg-clip-text text-transparent bg-orange-500"
+            [style]="
+              'background-color: rgb(var(--' + currentDescriptorColor + '))'
+            "
+          >
+            {{ currentDescriptor }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="w-full h-[2px] overflow-hidden">
+  <div
+    class="slider h-full bg-gradient-to-r from-aorange via-apurple to-aorange bg-repeat-x"
+  ></div>
+</div> -->

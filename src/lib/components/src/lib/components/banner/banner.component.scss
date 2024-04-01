@@ -1,0 +1,10 @@
+.slider {
+  background-size: 200%;
+  animation: slide 5s linear infinite;
+}
+
+@keyframes slide {
+  to {
+    background-position: -200% 0;
+  }
+}
