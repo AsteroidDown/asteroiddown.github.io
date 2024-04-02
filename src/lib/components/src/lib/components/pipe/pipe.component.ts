@@ -10,6 +10,8 @@ export interface PipeConfig {
   color: string;
   width?: number;
 
+  static?: boolean;
+
   sections: PipeSection[];
 }
 

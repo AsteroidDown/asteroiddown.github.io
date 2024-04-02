@@ -34,6 +34,17 @@ export class ExperienceComponent {
       ],
     },
     {
+      name: "Kids Great Minds",
+      url: "assets/KGM.jpeg",
+      position: "Programing Course Instructor",
+      time: "Jun 2020 - Jan 2022",
+      points: [
+        "Taught Python, Ruby, and Java coding courses with intro to advanced level concepts to students aged 7-14",
+        "Designed lesson plans based on student ability to ensure course content was understood and absorbed easily",
+        "Worked with a team to design a build an adventure game to teach finance in a fun way directed towards high-school students",
+      ],
+    },
+    {
       name: "Environment Canada",
       url: "assets/canada.png",
       position: "Atmospheric Chemist",

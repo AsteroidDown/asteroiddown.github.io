@@ -22,23 +22,21 @@
   ></pipe>
 </div>
 
-<div class="relative min-h-[80vh] w-screen">
-  <div class="min-h-[50vh]">
-    <div
-      class="flex flex-wrap w-screen justify-center gap-2 absolute transition-all duration-500"
-      [style.left]="showDetails ? '100%' : '0'"
-    >
-      <experience-card
-        *ngFor="let card of cards"
-        [name]="card.name"
-        [url]="card.url"
-        (click)="showDetails ? '' : selectCard(card)"
-      ></experience-card>
-    </div>
+<div class="w-screen min-h-[80vh] relative">
+  <div
+    class="flex flex-wrap w-screen justify-center gap-2 transition-all duration-500"
+    [style.margin-left]="showDetails ? '100%' : '0'"
+  >
+    <experience-card
+      *ngFor="let card of cards"
+      [url]="card.url"
+      [name]="card.name"
+      (click)="showDetails ? '' : selectCard(card)"
+    ></experience-card>
   </div>
 
   <div
-    class="flex justify-center w-screen min-h-[80vh] absolute top-0 transition-all duration-500"
+    class="flex justify-center w-screen absolute top-0 transition-all duration-500"
     [style.left]="showDetails ? '0' : '-100%'"
   >
     <div class="details-container">

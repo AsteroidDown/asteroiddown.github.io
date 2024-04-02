@@ -2,7 +2,7 @@
   *ngIf="pipe"
   #container
   class="pipe-container"
-  [style.width]="containerInView ? '100%' : '0'"
+  [style.width]="pipe.static || containerInView ? '100%' : '0'"
 >
   <div class="pipe">
     <div

@@ -1,0 +1,75 @@
+<div class="title-container">
+  <p class="title">Education</p>
+
+  <pipe
+    [pipe]="{
+      color: 'orange',
+      sections: [
+        { width: 45, h1: 70, h2: 20, y: 'bottom' },
+        { width: 10, h1: 40, h2: 30, y: 'top' },
+        { width: 20, h1: 40, h2: 20, y: 'top' },
+        { width: 35, h1: 60, h2: 20, y: 'bottom' }
+      ]
+    }"
+  ></pipe>
+
+  <pipe
+    [pipe]="{
+      color: 'blue',
+      sections: [
+        { width: 38, h1: 10, h2: 30, y: 'top' },
+        { width: 12, h1: 40, h2: 30, y: 'bottom' },
+        { width: 8, h1: 50, h2: 20, y: 'bottom' },
+        { width: 46, h1: 30, h2: 20, y: 'top' }
+      ]
+    }"
+  ></pipe>
+</div>
+
+<div class="flex">
+  <div class="content">
+    <p class="sub-title">University of Waterloo</p>
+
+    <div class="divide"></div>
+
+    <div class="degree">
+      <p class="text">BSc. Physics & Astronomy</p>
+      <i class="text mr-11">Sep 2016 - Apr 2021</i>
+    </div>
+
+    <p class="small-text" style="margin-left: 12px">
+      Physics and Astronomy Honours, Full-Time Undergraduate Coop Degree
+    </p>
+    <p class="small-text" style="margin-left: 12px">
+      Computing Technology Minor
+    </p>
+
+    <p class="text sub-heading">Notable CS Courses</p>
+    <div class="divide"></div>
+    <div class="grid">
+      <p class="small-text">Algorithms</p>
+      <p class="small-text">Network Systems</p>
+      <p class="small-text">Abstract Data Types</p>
+      <p class="small-text">Computers in Business</p>
+      <p class="small-text">Computational Physics</p>
+      <p class="small-text">Advanced Computer Usage</p>
+    </div>
+
+    <p class="text sub-heading">Lab Experience</p>
+    <div class="divide"></div>
+    <div class="grid">
+      <p class="small-text">Kinematics</p>
+      <p class="small-text">Modern Physics</p>
+      <p class="small-text">Physical Optics</p>
+      <p class="small-text">Chemical Reactions</p>
+      <p class="small-text">Electricity & Magnetism</p>
+      <p class="small-text">Astronomical Observations</p>
+    </div>
+  </div>
+
+  <div class="image-container">
+    <div class="image">
+      <img src="assets/waterloo.png" />
+    </div>
+  </div>
+</div>

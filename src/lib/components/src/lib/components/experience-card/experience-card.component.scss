@@ -1,6 +1,6 @@
 .container {
-  width: 25vw;
-  max-height: 80vh;
+  width: 320px;
+  height: 400px;
 
   z-index: 1;
   display: flex;
@@ -11,7 +11,6 @@
   position: relative;
 
   cursor: pointer;
-  aspect-ratio: 14 / 16;
 
   border-radius: 1rem;
   background-color: rgb(var(--orange), 5%);
