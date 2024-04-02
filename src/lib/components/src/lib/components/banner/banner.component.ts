@@ -52,6 +52,10 @@ export class BannerComponent implements OnInit {
     }, 2500);
   }
 
+  scroll() {
+    window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+  }
+
   ngOnInit() {
     this.descriptorLoop();
   }

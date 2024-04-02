@@ -22,10 +22,18 @@
   ></pipe>
 </div>
 
-<div class="w-screen min-h-[80vh] relative">
+<div
+  class="w-screen relative overflow-hidden"
+  [style]="
+    'min-height: ' +
+    math.max(cardsContainer.clientHeight + 40, windowHeight) +
+    'px'
+  "
+>
   <div
-    class="flex flex-wrap w-screen justify-center gap-2 transition-all duration-500"
-    [style.margin-left]="showDetails ? '100%' : '0'"
+    #cardsContainer
+    class="flex flex-wrap w-screen justify-center gap-2 absolute transition-all duration-500"
+    [style.left]="showDetails ? '100%' : '0'"
   >
     <experience-card
       *ngFor="let card of cards"

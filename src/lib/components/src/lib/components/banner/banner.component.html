@@ -1,5 +1,7 @@
-<div class="flex w-full h-screen">
-  <div class="flex flex-col justify-center gap-2 px-32 py-64">
+<div class="flex lg:flex-row flex-col w-full h-screen">
+  <div
+    class="flex flex-col justify-center gap-2 lg:mx-32 mx-12 lg:my-64 mt-[40%]"
+  >
     <p
       class="text-7xl font-medium bg-gradient-to-r from-primary to-apurple bg-clip-text text-transparent transition-all duration-300 hover:bg-[100%]"
       style="background-size: 200%"
@@ -36,19 +38,14 @@
     </div>
   </div>
 
-  <div class="flex justify-center flex-1">
-    <div class="flex flex-row items-center h-full">
+  <div class="flex flex-1 justify-center">
+    <div class="flex flex-row lg:items-center h-full mx-12 mt-6">
       <div
-        class="text-lg font-medium text-agray w-fit h-fit px-4 py-2 bg-aorange rounded-md"
+        class="text-lg hover:text-xl font-medium text-agray hover:text-white whitespace-nowrap w-fit h-fit px-4 py-2 hover:px-5 hover:py-3 bg-aorange hover:bg-apurple rounded-md hover:shadow-lg transition-all cursor-pointer"
+        (click)="scroll()"
       >
         Let's Get Started
       </div>
     </div>
   </div>
 </div>
-
-<!-- <div class="w-full h-[2px] overflow-hidden">
-  <div
-    class="slider h-full bg-gradient-to-r from-aorange via-apurple to-aorange bg-repeat-x"
-  ></div>
-</div> -->

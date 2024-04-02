@@ -16,6 +16,10 @@ export interface ExperienceCard {
   styleUrls: ["./experience.component.scss"],
 })
 export class ExperienceComponent {
+  math = Math;
+
+  windowHeight = window.innerHeight - 400;
+
   showDetails = false;
 
   selectedCard: ExperienceCard | null = null;

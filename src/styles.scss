@@ -9,6 +9,13 @@ body {
 
   font-family: "Roboto", sans-serif;
   color: whitesmoke;
+
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 .roboto-thin {
