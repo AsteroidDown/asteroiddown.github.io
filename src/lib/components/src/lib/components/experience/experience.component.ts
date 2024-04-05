@@ -35,7 +35,7 @@ export class ExperienceComponent {
     },
     {
       name: "Kids Great Minds",
-      image: "assets/KGM.jpeg",
+      image: "assets/KGM.png",
       position: "Programing Course Instructor",
       time: "Jun 2020 - Jan 2022",
       points: [
