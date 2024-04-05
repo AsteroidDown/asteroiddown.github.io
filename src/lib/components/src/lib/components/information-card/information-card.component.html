@@ -35,8 +35,8 @@
       [class]="config.description ? 'lg:h-[200px]' : 'lg:h-[140px]'"
     >
       <p
-        class="sub-title px-4 py-0 lg:text-center"
-        [class]="hovered ? 'drop-shadow' : ''"
+        class="name sub-title px-4 py-0 lg:text-center transition-all duration-300"
+        [style.text-shadow]="hovered ? '0px 0px 0.5rem white' : ''"
         [innerHTML]="config.name"
       ></p>
 

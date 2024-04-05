@@ -1,121 +1,33 @@
-.details-container {
-  width: 80vw;
-  height: fit-content;
+.close {
+  margin-right: 2px;
+  align-self: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 100%;
+  transition: all 350ms ease;
 
-  display: flex;
-  flex-direction: column;
-
-  border-radius: 1rem;
-  background-color: rgb(var(--blue), 5%);
-  border: 3px solid rgb(var(--blue), 80%);
-
-  @media screen and (max-width: 600px) {
-    width: 90vw;
+  .line {
+    position: absolute;
+    width: 24px;
+    height: 4px;
+    top: 50%;
+    left: 50%;
+    border-radius: 2px;
+    transform-origin: center;
+    transition: all 100ms ease;
+    background-color: rgb(var(--orange));
   }
+}
 
-  .details-header {
-    // padding: 24px 32px;
-    // display: flex;
-    // min-height: 96px;
-    // gap: 8px;
-    // justify-content: space-between;
+.close:hover {
+  margin-right: 0;
+  width: 44px;
+  height: 44px;
+  background-color: rgb(var(--orange));
 
-    .name {
-      align-self: center;
-    }
-
-    .close {
-      margin-right: 2px;
-      align-self: center;
-      width: 40px;
-      height: 40px;
-      cursor: pointer;
-      position: relative;
-      border-radius: 100%;
-      transition: all 350ms ease;
-
-      .line {
-        position: absolute;
-        width: 24px;
-        height: 4px;
-        top: 50%;
-        left: 50%;
-        border-radius: 2px;
-        transform-origin: center;
-        transition: all 100ms ease;
-        background-color: rgb(var(--orange));
-      }
-    }
-
-    .close:hover {
-      margin-right: 0;
-      width: 44px;
-      height: 44px;
-      background-color: rgb(var(--orange));
-
-      .line {
-        background-color: rgb(var(--gray));
-      }
-    }
-  }
-
-  .divide {
-    width: 100%;
-    border: 1px solid rgb(var(--blue), 80%);
-  }
-
-  .details-content {
-    height: 100%;
-    display: flex;
-
-    .info {
-      flex: 3;
-      padding: 24px 48px;
-
-      gap: 12px;
-      display: flex;
-      flex-direction: column;
-
-      .title {
-        display: flex;
-        justify-content: space-between;
-
-        .position {
-          font-weight: 400;
-          color: rgb(var(--orange));
-        }
-
-        .time {
-          color: rgb(var(--orange));
-        }
-      }
-
-      @media screen and (max-width: 600px) {
-        padding: 12px 24px;
-
-        .title {
-          gap: 8px;
-          flex-direction: column;
-        }
-      }
-    }
-
-    .logo {
-      flex: 2;
-
-      display: flex;
-      justify-content: center;
-
-      img {
-        align-self: center;
-        width: 80%;
-        height: 80%;
-        object-fit: contain;
-      }
-
-      @media screen and (max-width: 600px) {
-        display: none;
-      }
-    }
+  .line {
+    background-color: rgb(var(--gray));
   }
 }

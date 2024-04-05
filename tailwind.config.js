@@ -16,7 +16,7 @@ module.exports = {
       },
       boxShadow: {
         info: '0px 0px 8px 3px rgb(var(--orange), 60%)',
-      }
+      },
     },
   },
   plugins: [],
