@@ -2,6 +2,8 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import {
   BannerComponent,
+  ContactCardComponent,
+  ContactComponent,
   EducationComponent,
   ExperienceComponent,
   InformationCardComponent,
@@ -21,6 +23,8 @@ import { ReactiveFormsModule } from "@angular/forms";
     InformationCardComponent,
     EducationComponent,
     ProjectsComponent,
+    ContactComponent,
+    ContactCardComponent,
   ],
   exports: [
     BannerComponent,
@@ -30,6 +34,8 @@ import { ReactiveFormsModule } from "@angular/forms";
     InformationCardComponent,
     EducationComponent,
     ProjectsComponent,
+    ContactComponent,
+    ContactCardComponent,
   ],
 })
 export class ComponentsModule {}

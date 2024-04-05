@@ -1,0 +1,15 @@
+<a *ngIf="config" [href]="config.url">
+  <div (mouseenter)="hovered = true" (mouseleave)="hovered = false">
+    <div
+      class="w-12 h-12 bg-aorange mask"
+      style="mask-size: contain; mask-position: center; mask-repeat: no-repeat"
+      [style]="'mask-image: url(' + '\'assets/' + config.image + '.svg\')'"
+    >
+      <img
+        class="transition-all duration-300"
+        [src]="'assets/' + config.image + '.svg'"
+        [class]="hovered ? 'opacity-0' : 'opacity-100'"
+      />
+    </div>
+  </div>
+</a>

@@ -5,3 +5,5 @@ export * from "./experience/experience.component";
 export * from "./information-card/information-card.component";
 export * from "./education/education.component";
 export * from "./projects/projects.component";
+export * from "./contact/contact.component";
+export * from "./contact-card/contact-card.component";
