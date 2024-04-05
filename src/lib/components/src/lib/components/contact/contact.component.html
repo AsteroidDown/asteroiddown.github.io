@@ -26,8 +26,14 @@
 
 <div class="flex flex-wrap justify-center items-center mb-12">
   <div
-    class="flex flex-wrap gap-6 justify-center p-8 bg-apurple bg-opacity-25 rounded-2xl border-[3px] border-apurple border-opacity-80 hover:shadow-info transition-all duration-300"
+    class="flex flex-wrap gap-6 justify-center p-8 bg-apurple bg-opacity-25 rounded-2xl border-[3px] border-apurple border-opacity-80 hover:shadow-apurple transition-all duration-300 relative overflow-hidden"
   >
-    <contact-card *ngFor="let card of cards" [config]="card"></contact-card>
+    <contact-card
+      *ngFor="let card of cards"
+      class="z-10"
+      [config]="card"
+    ></contact-card>
+
+    <div class="purple-background"></div>
   </div>
 </div>

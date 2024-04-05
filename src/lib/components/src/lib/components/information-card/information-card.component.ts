@@ -24,9 +24,9 @@ export class InformationCardComponent {
   positionClasses = "flex lg:flex-col m-2 relative";
   sizeClasses = "lg:w-[320px] w-[95vw] h-[96px]";
   containerClasses =
-    "bg-aorange bg-opacity-5 border-[3px] border-aorange border-opacity-80 rounded-2xl shadow-aorange";
+    "bg-aorange bg-opacity-5 border-[3px] border-aorange border-opacity-80 rounded-2xl";
   styleClasses = "overflow-hidden cursor-pointer transition-all duration-300 ";
-  hoverClasses = "hover:shadow-info";
+  hoverClasses = "hover:shadow-aorange";
 
   classes = `${this.positionClasses} ${this.sizeClasses} ${this.containerClasses} ${this.styleClasses} ${this.hoverClasses}`;
 }

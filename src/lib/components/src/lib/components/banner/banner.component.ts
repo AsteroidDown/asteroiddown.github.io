@@ -1,3 +1,4 @@
+import { ViewportScroller } from "@angular/common";
 import { Component, OnInit } from "@angular/core";
 
 @Component({
@@ -6,6 +7,8 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./banner.component.scss"],
 })
 export class BannerComponent implements OnInit {
+  constructor(private viewportScroller: ViewportScroller) {}
+
   descriptors = [
     "Innovative",
     "Driven",
@@ -54,6 +57,18 @@ export class BannerComponent implements OnInit {
 
   scroll() {
     window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
+  }
+
+  scrollToEducation() {
+    this.viewportScroller.scrollToAnchor("education");
+  }
+
+  scrollToProjects() {
+    this.viewportScroller.scrollToAnchor("projects");
+  }
+
+  scrollToContact() {
+    this.viewportScroller.scrollToAnchor("contact");
   }
 
   ngOnInit() {

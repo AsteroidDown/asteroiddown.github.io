@@ -15,7 +15,9 @@ module.exports = {
         'agray': '#171616',
       },
       boxShadow: {
-        info: '0px 0px 8px 3px rgb(var(--orange), 60%)',
+        aorange: '0px 0px 8px 3px rgb(var(--orange), 60%)',
+        ablue: '0px 0px 8px 3px rgb(var(--blue), 60%)',
+        apurple: '0px 0px 8px 3px rgb(var(--purple), 60%)',
       },
     },
   },
