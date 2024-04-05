@@ -14,11 +14,11 @@
   }
 
   .details-header {
-    padding: 24px 32px;
-    display: flex;
-    min-height: 96px;
-    gap: 8px;
-    justify-content: space-between;
+    // padding: 24px 32px;
+    // display: flex;
+    // min-height: 96px;
+    // gap: 8px;
+    // justify-content: space-between;
 
     .name {
       align-self: center;
@@ -91,10 +91,11 @@
       }
 
       @media screen and (max-width: 600px) {
-        padding: 24px;
+        padding: 12px 24px;
 
         .title {
           gap: 8px;
+          flex-direction: column;
         }
       }
     }

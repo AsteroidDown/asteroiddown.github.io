@@ -3,10 +3,11 @@ import { NgModule } from "@angular/core";
 import {
   BannerComponent,
   EducationComponent,
-  ExperienceCardComponent,
   ExperienceComponent,
+  InformationCardComponent,
   PipeBackgroundComponent,
   PipeComponent,
+  ProjectsComponent,
 } from "./components";
 import { ReactiveFormsModule } from "@angular/forms";
 
@@ -17,16 +18,18 @@ import { ReactiveFormsModule } from "@angular/forms";
     PipeComponent,
     PipeBackgroundComponent,
     ExperienceComponent,
-    ExperienceCardComponent,
+    InformationCardComponent,
     EducationComponent,
+    ProjectsComponent,
   ],
   exports: [
     BannerComponent,
     PipeComponent,
     PipeBackgroundComponent,
     ExperienceComponent,
-    ExperienceCardComponent,
+    InformationCardComponent,
     EducationComponent,
+    ProjectsComponent,
   ],
 })
 export class ComponentsModule {}

@@ -12,6 +12,6 @@ export class PipeBackgroundComponent {
     const verticalOffset =
       document.documentElement.scrollTop || document.body.scrollTop || 0;
 
-    this.offset = verticalOffset / 8;
+    this.offset = verticalOffset / 4;
   }
 }

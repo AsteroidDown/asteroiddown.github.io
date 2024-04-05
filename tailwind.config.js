@@ -13,6 +13,9 @@ module.exports = {
         'ablue': '#73b9ff',
         'apurple': '#ca03fc',
         'agray': '#171616',
+      },
+      boxShadow: {
+        info: '0px 0px 8px 3px rgb(var(--orange), 60%)',
       }
     },
   },

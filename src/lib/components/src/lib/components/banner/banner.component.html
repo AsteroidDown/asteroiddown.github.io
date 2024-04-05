@@ -1,6 +1,6 @@
 <div class="flex lg:flex-row flex-col w-full h-screen">
   <div
-    class="flex flex-col justify-center gap-2 lg:mx-32 mx-12 lg:my-64 mt-[40%]"
+    class="flex flex-col justify-center gap-2 lg:mx-32 mx-8 lg:my-64 mt-[40%]"
   >
     <p
       class="text-7xl font-medium bg-gradient-to-r from-primary to-apurple bg-clip-text text-transparent transition-all duration-300 hover:bg-[100%]"
@@ -8,17 +8,19 @@
     >
       Jasper Stahmer
     </p>
-    <div class="flex overflow-y-hidden min-h-10">
+    <div class="flex overflow-y-hidden lg:min-h-10 min-h-[22px]">
       <div class="flex gap-2 relative">
-        <p class="text-3xl font-normal text-gray-100">A developer who is</p>
+        <p class="lg:text-3xl text-xl font-normal text-gray-100">
+          A developer who is
+        </p>
 
         <div
-          class="flex flex-col transition-all absolute left-[260px]"
+          class="flex flex-col transition-all absolute lg:left-[260px] left-[174px]"
+          [class]="switching ? 'mt-0' : 'lg:mt-[-36px] mt-[-28px]'"
           [style.transition-duration]="switching ? '300ms' : '0ms'"
-          [style.margin-top]="switching ? '0px' : '-36px'"
         >
           <p
-            class="text-3xl font-normal bg-clip-text text-transparent bg-orange-50"
+            class="lg:text-3xl text-xl font-normal bg-clip-text text-transparent bg-orange-50"
             [style]="
               'background-color: rgb(var(--' + nextDescriptorColor + '))'
             "
@@ -26,7 +28,7 @@
             {{ nextDescriptor }}
           </p>
           <p
-            class="text-3xl font-normal bg-clip-text text-transparent bg-orange-500"
+            class="lg:text-3xl text-xl font-normal bg-clip-text text-transparent bg-orange-500"
             [style]="
               'background-color: rgb(var(--' + currentDescriptorColor + '))'
             "

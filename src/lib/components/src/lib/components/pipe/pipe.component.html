@@ -1,13 +1,14 @@
 <div
   *ngIf="pipe"
   #container
-  class="pipe-container"
+  class="pipe-container lg:min-h-[128px] overflow-hidden relative transition-all duration-1000"
+  [class]="!pipe.static ? 'min-h-[32px]' : 'min-h-[128px]'"
   [style.width]="pipe.static || containerInView ? '100%' : '0'"
 >
-  <div class="pipe">
+  <div class="flex w-screen h-full top-0 left-0 absolute">
     <div
       *ngFor="let section of pipe.sections; index as index"
-      class="pipe-section"
+      class="flex flex-col h-full"
       [style.width]="section.width + '%'"
     >
       <div [style.height]="section.h1 + '%'"></div>

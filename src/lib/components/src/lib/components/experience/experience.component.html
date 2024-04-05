@@ -2,6 +2,7 @@
   <p class="title">Work Experience</p>
 
   <pipe
+    class="lg:top-0 top-[75%]"
     [pipe]="{
       color: 'blue',
       sections: [
@@ -12,6 +13,7 @@
   ></pipe>
 
   <pipe
+    class="lg:top-0 top-[75%]"
     [pipe]="{
       color: 'orange',
       sections: [
@@ -22,33 +24,28 @@
   ></pipe>
 </div>
 
-<div
-  class="w-screen relative overflow-hidden"
-  [style]="
-    'min-height: ' +
-    math.max(cardsContainer.clientHeight + 40, windowHeight) +
-    'px'
-  "
->
+<div class="flex w-screen min-h-[60vh] relative overflow-hidden">
   <div
     #cardsContainer
-    class="flex flex-wrap w-screen justify-center gap-2 absolute transition-all duration-500"
-    [style.left]="showDetails ? '100%' : '0'"
+    class="flex flex-wrap min-w-full justify-center gap-2 transition-all duration-500"
+    [class.ml-[100%]]="showDetails"
   >
-    <experience-card
+    <information-card
       *ngFor="let card of cards"
-      [url]="card.url"
-      [name]="card.name"
+      [config]="card"
       (click)="showDetails ? '' : selectCard(card)"
-    ></experience-card>
+    ></information-card>
   </div>
 
   <div
-    class="flex justify-center w-screen absolute top-0 transition-all duration-500"
-    [style.left]="showDetails ? '0' : '-100%'"
+    class="flex justify-center min-w-full transition-all duration-500 absolute"
+    [class.-left-full]="!showDetails"
+    [class.left-0]="showDetails"
   >
     <div class="details-container">
-      <div class="details-header">
+      <div
+        class="details-header flex justify-between px-6 lg:py-8 py-2 lg:min-h-[96px] min-h-[64px] max-h-[96px] gap-2"
+      >
         <span class="name sub-title">{{ selectedCard?.name }}</span>
 
         <div class="close" (click)="clearCard()">
@@ -74,13 +71,16 @@
             </span>
           </div>
 
-          <span *ngFor="let point of selectedCard?.points" class="point text">
+          <span
+            *ngFor="let point of selectedCard?.points"
+            class="lg:text-lg text-sm font-normal"
+          >
             {{ point }}
           </span>
         </div>
 
         <div class="logo">
-          <img [src]="selectedCard?.url" />
+          <img [src]="selectedCard?.image" />
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 
 export interface ExperienceCard {
   name: string;
-  url?: string;
+  image: string;
 
   position?: string;
   time?: string;
@@ -16,10 +16,6 @@ export interface ExperienceCard {
   styleUrls: ["./experience.component.scss"],
 })
 export class ExperienceComponent {
-  math = Math;
-
-  windowHeight = window.innerHeight - 400;
-
   showDetails = false;
 
   selectedCard: ExperienceCard | null = null;
@@ -27,7 +23,7 @@ export class ExperienceComponent {
   cards: ExperienceCard[] = [
     {
       name: "VectorSolv",
-      url: "assets/vectorsolv.png",
+      image: "assets/vectorsolv.png",
       position: "Full Stack Software Developer",
       time: "Jan 2022 - Feb 2024",
       points: [
@@ -39,7 +35,7 @@ export class ExperienceComponent {
     },
     {
       name: "Kids Great Minds",
-      url: "assets/KGM.jpeg",
+      image: "assets/KGM.jpeg",
       position: "Programing Course Instructor",
       time: "Jun 2020 - Jan 2022",
       points: [
@@ -50,7 +46,7 @@ export class ExperienceComponent {
     },
     {
       name: "Environment Canada",
-      url: "assets/canada.png",
+      image: "assets/canada.png",
       position: "Atmospheric Chemist",
       time: "Sep - Dec 2019",
       points: [
@@ -61,7 +57,7 @@ export class ExperienceComponent {
     },
     {
       name: "Natural Resources Canada",
-      url: "assets/nrcan.jpeg",
+      image: "assets/canada.png",
       position: "Research Assistant",
       time: "Jan - Apr 2019",
       points: [

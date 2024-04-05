@@ -1,0 +1,38 @@
+<div class="title-container">
+  <p class="title">Projects</p>
+
+  <pipe
+    class="lg:top-0 top-[75%]"
+    [pipe]="{
+      color: 'blue',
+      sections: [
+        { width: 40, h1: 60, h2: 20, y: 'bottom' },
+        { width: 20, h1: 40, h2: 20, y: 'top' },
+        { width: 2, h1: 40, h2: 50, y: 'top' },
+        { width: 1, h1: 100, h2: 20, y: 'bottom' },
+        { width: 1, h1: 40, h2: 70, y: 'bottom' },
+        { width: 40, h1: 20, h2: 20, y: 'top' }
+      ]
+    }"
+  ></pipe>
+
+  <pipe
+    class="lg:top-0 top-[75%]"
+    [pipe]="{
+      color: 'orange',
+      sections: [
+        { width: 50, h1: 20, h2: 40, y: 'top' },
+        { width: 50, h1: 60, h2: 20, y: 'bottom' }
+      ]
+    }"
+  ></pipe>
+</div>
+
+<div
+  class="flex lg:flex-row flex-col flex-wrap gap-4 justify-center items-center mb-12"
+>
+  <information-card
+    *ngFor="let project of projects"
+    [config]="project"
+  ></information-card>
+</div>
