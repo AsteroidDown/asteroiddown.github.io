@@ -62,13 +62,12 @@
       justify-content: start;
 
       i {
-        margin-top: -8px;
         font-size: 16px;
       }
     }
 
     .divide {
-      margin: 24px -12px;
+      margin: 12px -12px;
       padding: 0 12px;
     }
 
@@ -79,6 +78,7 @@
 
     .grid {
       grid-template-columns: 1fr 1fr;
+      column-gap: 4px;
     }
   }
 }
