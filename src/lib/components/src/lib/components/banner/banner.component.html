@@ -1,0 +1,86 @@
+<div class="flex lg:flex-row flex-col w-full h-screen">
+  <div
+    class="flex flex-col justify-center gap-2 lg:mx-32 mx-8 lg:my-64 mt-[40%]"
+  >
+    <p
+      class="text-7xl font-medium bg-gradient-to-r from-primary to-apurple bg-clip-text text-transparent transition-all duration-300 hover:bg-[100%]"
+      style="background-size: 200%"
+    >
+      Jasper Stahmer
+    </p>
+
+    <div class="flex overflow-y-hidden lg:min-h-10 min-h-[22px] mb-2">
+      <div class="flex gap-2 relative">
+        <p class="lg:text-3xl text-xl font-normal text-gray-100">
+          A developer who is
+        </p>
+
+        <div
+          class="flex flex-col transition-all absolute lg:left-[260px] left-[174px]"
+          [class]="switching ? 'mt-0' : 'lg:mt-[-36px] mt-[-28px]'"
+          [style.transition-duration]="switching ? '300ms' : '0ms'"
+        >
+          <p
+            class="lg:text-3xl text-xl font-normal bg-clip-text text-transparent bg-orange-50"
+            [style]="
+              'background-color: rgb(var(--' + nextDescriptorColor + '))'
+            "
+          >
+            {{ nextDescriptor }}
+          </p>
+          <p
+            class="lg:text-3xl text-xl font-normal bg-clip-text text-transparent bg-orange-500"
+            [style]="
+              'background-color: rgb(var(--' + currentDescriptorColor + '))'
+            "
+          >
+            {{ currentDescriptor }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="lg:flex hidden text-lg hover:text-xl font-medium text-agray hover:text-white whitespace-nowrap w-fit h-fit px-4 py-2 hover:px-5 hover:py-3 hover:-my-1 hover:-mx-1 bg-aorange hover:bg-apurple rounded-md hover:shadow-lg transition-all cursor-pointer"
+      (click)="scroll()"
+    >
+      Let's Get Started
+    </div>
+  </div>
+
+  <div class="flex flex-1 justify-center">
+    <div class="flex flex-col lg:justify-center lg:mt-0 mt-6 gap-4">
+      <div
+        class="lg:w-full w-[90vw] p-4 bg-ablue bg-opacity-25 border-[3px] border-ablue border-opacity-80 rounded-2xl hover:shadow-ablue transition-all duration-300 cursor-pointer relative overflow-hidden"
+        (click)="scroll()"
+      >
+        <p class="text-3xl text-ablue text-center">Work Experience</p>
+        <div class="blue-background"></div>
+      </div>
+
+      <div
+        class="lg:w-full w-[90vw] p-4 bg-apurple bg-opacity-25 border-[3px] border-apurple border-opacity-80 rounded-2xl hover:shadow-apurple transition-all duration-300 cursor-pointer relative overflow-hidden"
+        (click)="scrollToEducation()"
+      >
+        <p class="text-3xl text-apurple text-center">Education</p>
+        <div class="purple-background"></div>
+      </div>
+
+      <div
+        class="lg:w-full w-[90vw] p-4 bg-aorange bg-opacity-25 border-[3px] border-aorange border-opacity-80 rounded-2xl hover:shadow-aorange transition-all duration-300 cursor-pointer relative overflow-hidden"
+        (click)="scrollToProjects()"
+      >
+        <p class="text-3xl text-aorange text-center">Projects</p>
+        <div class="orange-background"></div>
+      </div>
+
+      <div
+        class="lg:w-full w-[90vw] p-4 bg-ablue bg-opacity-25 border-[3px] border-ablue border-opacity-80 rounded-2xl hover:shadow-ablue transition-all duration-300 cursor-pointer relative overflow-hidden"
+        (click)="scrollToContact()"
+      >
+        <p class="text-3xl text-ablue text-center">Contact</p>
+        <div class="blue-background"></div>
+      </div>
+    </div>
+  </div>
+</div>

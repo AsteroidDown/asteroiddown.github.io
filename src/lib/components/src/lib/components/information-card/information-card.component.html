@@ -1,0 +1,58 @@
+<a *ngIf="config?.link; else noLink" target="_blank" [href]="config?.link">
+  <ng-container *ngTemplateOutlet="card"></ng-container>
+</a>
+
+<ng-template #noLink>
+  <ng-container *ngTemplateOutlet="card"></ng-container>
+</ng-template>
+
+<ng-template #card>
+  <div
+    *ngIf="config"
+    [class]="
+      classes + (config.description ? ' lg:h-[444px]' : ' lg:h-[400px] ')
+    "
+    (mouseenter)="hovered = true"
+    (mouseleave)="hovered = false"
+  >
+    <div
+      class="flex justify-center items-center lg:w-full w-[128px] lg:min-h-[260px] h-[94px]"
+    >
+      <img
+        *ngIf="config.gif ? !hovered : true"
+        class="lg:w-[80%] w-[64px] lg:h-[80%] h-[64px] object-contain"
+        [src]="config.image"
+      />
+      <img
+        *ngIf="config.gif && hovered"
+        class="w-[80%] h-[80%] object-contain"
+        [src]="config.gif"
+      />
+    </div>
+
+    <div
+      class="flex flex-col justify-center lg:items-center w-full h-[94px] z-[0] transition-all duration-300"
+      [class]="config.description ? 'lg:h-[200px]' : 'lg:h-[140px]'"
+    >
+      <p
+        class="name sub-title px-4 py-0 lg:text-center transition-all duration-300"
+        [style.text-shadow]="hovered ? '0px 0px 0.5rem white' : ''"
+        [innerHTML]="config.name"
+      ></p>
+
+      <p
+        *ngIf="config.description"
+        class="px-4 py-2 text-center lg:flex hidden"
+        [innerHTML]="config.description"
+      ></p>
+
+      <p
+        *ngIf="config.footnote"
+        class="text-sm font-light px-4 py-2 text-center lg:flex hidden"
+        [innerHTML]="config.footnote"
+      ></p>
+    </div>
+
+    <div class="orange-background"></div>
+  </div>
+</ng-template>

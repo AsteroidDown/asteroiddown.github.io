@@ -1,0 +1,111 @@
+.content {
+  flex: 1;
+  margin: 24px 64px;
+
+  .degree {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      color: rgb(var(--orange));
+      font-weight: 400;
+    }
+
+    i {
+      margin-top: 2px;
+      font-size: 20px;
+      color: rgb(var(--blue));
+    }
+  }
+
+  .sub-heading {
+    margin-top: 36px;
+    color: rgb(var(--blue));
+  }
+
+  .grid {
+    display: grid;
+    margin-left: 12px;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 12px;
+  }
+
+  .divide {
+    width: 100%;
+    height: 2px;
+
+    margin: 24px -24px;
+    padding: 0 24px;
+
+    border-radius: 2px;
+    background: linear-gradient(
+      to right,
+      rgb(var(--blue)),
+      rgb(var(--purple)),
+      rgb(var(--orange)) 75%
+    );
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .content {
+    margin: 24px 24px;
+
+    .heading {
+      font-size: 6vw;
+    }
+
+    .degree {
+      margin-bottom: 12px;
+      margin-right: 44px;
+      flex-direction: column;
+      justify-content: start;
+
+      i {
+        margin-top: -8px;
+        font-size: 16px;
+      }
+    }
+
+    .divide {
+      margin: 24px -12px;
+      padding: 0 12px;
+    }
+
+    .sub-heading {
+      margin-top: 24px;
+      color: rgb(var(--blue));
+    }
+
+    .grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+.image-container {
+  margin: 0 64px 0 36px;
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+
+  .image {
+    align-self: center;
+
+    img {
+      object-fit: contain;
+      border-radius: 50%;
+      box-shadow: 0 0 8px 3px;
+
+      transition: all 350ms ease;
+    }
+
+    img:hover {
+      box-shadow: 0 0 12px 6px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}

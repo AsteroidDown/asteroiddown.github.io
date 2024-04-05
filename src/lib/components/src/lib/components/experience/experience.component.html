@@ -1,0 +1,96 @@
+<div class="title-container">
+  <p class="title">Work Experience</p>
+
+  <pipe
+    class="lg:top-0 top-[75%]"
+    [pipe]="{
+      color: 'blue',
+      sections: [
+        { width: 80, h1: 70, h2: 20, y: 'bottom' },
+        { width: 20, h1: 40, h2: 30, y: 'top' }
+      ]
+    }"
+  ></pipe>
+
+  <pipe
+    class="lg:top-0 top-[75%]"
+    [pipe]="{
+      color: 'orange',
+      sections: [
+        { width: 40, h1: 10, h2: 30, y: 'top' },
+        { width: 60, h1: 40, h2: 30, y: 'bottom' }
+      ]
+    }"
+  ></pipe>
+</div>
+
+<div class="flex w-screen min-h-[60vh] relative overflow-hidden">
+  <div
+    #cardsContainer
+    class="flex flex-wrap min-w-full justify-center gap-2 transition-all duration-500"
+    [class.ml-[100%]]="showDetails"
+  >
+    <information-card
+      *ngFor="let card of cards"
+      [config]="card"
+      (click)="showDetails ? '' : selectCard(card)"
+    ></information-card>
+  </div>
+
+  <div
+    class="flex justify-center min-w-full transition-all duration-500 absolute"
+    [class.-left-full]="!showDetails"
+    [class.left-0]="showDetails"
+  >
+    <div
+      class="flex flex-col lg:w-[80vw] w-[90vw] h-fit bg-ablue bg-opacity-5 border-[3px] border-ablue border-opacity-80 rounded-2xl"
+    >
+      <div
+        class="flex justify-between px-6 lg:py-8 py-2 lg:min-h-[96px] min-h-[64px] max-h-[96px] gap-2"
+      >
+        <span
+          class="self-center sub-title"
+          [innerHTML]="selectedCard?.name"
+        ></span>
+
+        <div class="close" (click)="clearCard()">
+          <div
+            class="line"
+            style="transform: translate(-50%, -50%) rotate(315deg)"
+          ></div>
+          <div
+            class="line"
+            style="transform: translate(-50%, -50%) rotate(45deg)"
+          ></div>
+        </div>
+      </div>
+
+      <div class="w-full border border-ablue border-opacity-80"></div>
+
+      <div class="flex h-full">
+        <div class="flex flex-col gap-3 flex-[4] lg:px-12 lg:py-6 px-6 py-3">
+          <div class="flex lg:flex-row flex-col justify-between lg:gap-0 gap-2">
+            <span class="font-normal text-aorange text">
+              {{ selectedCard?.position }}
+            </span>
+
+            <span class="text-aorange text">
+              <i>{{ selectedCard?.time }}</i>
+            </span>
+          </div>
+
+          <span *ngFor="let point of selectedCard?.points" class="small-text">
+            {{ point }}
+          </span>
+        </div>
+
+        <div class="flex justify-center flex-[2]">
+          <img
+            class="lg:flex hidden w-[80%] h-[80%] self-center object-contain"
+            [src]="selectedCard?.image"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

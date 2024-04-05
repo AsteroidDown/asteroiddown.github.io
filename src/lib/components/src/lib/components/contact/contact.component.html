@@ -1,0 +1,39 @@
+<div class="title-container">
+  <p class="title">Contact</p>
+
+  <pipe
+    class="lg:top-0 top-[75%]"
+    [pipe]="{
+      color: 'blue',
+      sections: [
+        { width: 40, h1: 55, h2: 30, y: 'bottom' },
+        { width: 60, h1: 35, h2: 30, y: 'top' }
+      ]
+    }"
+  ></pipe>
+
+  <pipe
+    class="lg:top-0 top-[75%]"
+    [pipe]="{
+      color: 'orange',
+      sections: [
+        { width: 40, h1: 15, h2: 30, y: 'top' },
+        { width: 60, h1: 40, h2: 30, y: 'bottom' }
+      ]
+    }"
+  ></pipe>
+</div>
+
+<div class="flex flex-wrap justify-center items-center mb-12">
+  <div
+    class="flex flex-wrap gap-6 justify-center p-8 bg-apurple bg-opacity-25 rounded-2xl border-[3px] border-apurple border-opacity-80 hover:shadow-apurple transition-all duration-300 relative overflow-hidden"
+  >
+    <contact-card
+      *ngFor="let card of cards"
+      class="z-10"
+      [config]="card"
+    ></contact-card>
+
+    <div class="purple-background"></div>
+  </div>
+</div>
