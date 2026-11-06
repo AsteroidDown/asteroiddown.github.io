@@ -1,0 +1,42 @@
+.experienceCard {
+  border-bottom: 1px solid rgb(var(--border-1));
+}
+.companyMark {
+  background: #202631;
+}
+.companyMark img {
+  background: #202631;
+}
+.companyMark img.monochromeLogo {
+  background: transparent;
+  filter: brightness(0) invert(1);
+}
+.companyMark > span {
+  font:
+    24px ui-monospace,
+    monospace;
+  color: rgb(var(--secondary));
+}
+h3.companyName {
+  font-size: 20px;
+  letter-spacing: -0.4px;
+}
+.role {
+  color: #c2c6d0;
+}
+.experiencePoints {
+  color: #b8bdc8;
+  font-size: 14px;
+  line-height: 1.8;
+}
+.experiencePoints li::marker {
+  color: #657a99;
+}
+@media (max-width: 767px) {
+  h3.companyName {
+    font-size: 18px;
+  }
+  .experiencePoints {
+    font-size: 13px;
+  }
+}

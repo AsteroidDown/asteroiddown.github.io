@@ -1,0 +1,8 @@
+.siteFooter {
+  border-top: 1px solid rgb(var(--border-1));
+  color: rgb(var(--text-light));
+  font-size: 11px;
+}
+.siteFooter a:hover {
+  color: rgb(var(--secondary));
+}

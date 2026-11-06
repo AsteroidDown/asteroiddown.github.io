@@ -1,0 +1,245 @@
+.smallOrbit {
+  width: 7px;
+  height: 7px;
+  background: rgb(var(--secondary));
+  border-radius: 100%;
+  box-shadow: 0 0 0 5px rgba(var(--secondary), 0.07059);
+}
+.heroTitle {
+  font-size: clamp(64px, 7.8vw, 104px);
+  letter-spacing: -6px;
+  line-height: 0.99;
+}
+.heroTitle > span:first-of-type {
+  color: rgb(var(--tertiary));
+}
+.heroTitle .titleDot {
+  color: rgb(var(--primary));
+}
+.heroStatement {
+  font-size: 26px;
+  letter-spacing: -0.65px;
+  line-height: 1.35;
+}
+.heroDescription {
+  line-height: 1.9;
+  color: rgb(var(--text-light));
+}
+.primaryLink {
+  background: rgb(var(--secondary));
+  color: #101b2b;
+  font-weight: 600;
+}
+.primaryLink:hover {
+  background: #bad8ff;
+  color: #101b2b;
+}
+.secondaryLink {
+  border: 1px solid #414652;
+}
+.orbitArt {
+  position: relative;
+  height: 420px;
+  width: 100%;
+}
+.orbit {
+  position: absolute;
+  border: 1px solid;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+}
+.orbitOne {
+  width: 370px;
+  height: 230px;
+  border-color: rgba(var(--secondary), 0.31373);
+  transform: translate(-50%, -50%) rotate(-35deg);
+  animation: orbit-blue-turn 60s linear infinite;
+}
+.orbitTwo {
+  width: 370px;
+  height: 230px;
+  border-color: rgba(var(--tertiary), 0.33333);
+  transform: translate(-50%, -50%) rotate(35deg);
+  animation: orbit-purple-turn 75s linear infinite;
+}
+.orbitThree {
+  width: 290px;
+  height: 290px;
+  border-color: rgba(var(--primary), 0.25098);
+  transform: translate(-50%, -50%);
+  animation: orbit-orange-turn 45s linear infinite;
+}
+.orbit::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  top: -3px;
+  left: calc(50% - 3px);
+}
+.orbitOne::after {
+  background: rgb(var(--secondary));
+  box-shadow: 0 0 12px rgba(var(--secondary), 0.53333);
+}
+.orbitTwo::after {
+  background: rgb(var(--tertiary));
+  box-shadow: 0 0 12px rgba(var(--tertiary), 0.53333);
+}
+.orbitThree::after {
+  background: rgb(var(--primary));
+  box-shadow: 0 0 12px rgba(var(--primary), 0.53333);
+}
+@keyframes orbit-blue-turn {
+  to {
+    transform: translate(-50%, -50%) rotate(325deg);
+  }
+}
+@keyframes orbit-purple-turn {
+  to {
+    transform: translate(-50%, -50%) rotate(-325deg);
+  }
+}
+@keyframes orbit-orange-turn {
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+.orbitCore {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 500;
+  font-size: 78px;
+  letter-spacing: -8px;
+  color: #dce4f6;
+}
+.orbitCore > span {
+  color: rgb(var(--primary));
+}
+.orbitLabel {
+  position: absolute;
+  font:
+    10px ui-monospace,
+    monospace;
+  padding: 10px 12px;
+  border: 1px solid rgb(var(--border-1));
+  border-radius: 5px;
+  background: rgb(var(--bg-1));
+}
+.labelOne {
+  left: 1%;
+  top: 22%;
+  color: rgb(var(--secondary));
+}
+.labelTwo {
+  right: 0;
+  top: 48%;
+  color: rgb(var(--tertiary));
+}
+.labelThree {
+  left: 8%;
+  bottom: 18%;
+  color: rgb(var(--primary));
+}
+.star {
+  position: absolute;
+}
+.starOne {
+  top: 11%;
+  right: 20%;
+  font-size: 20px;
+  color: rgb(var(--tertiary));
+}
+.starTwo {
+  bottom: 19%;
+  right: 19%;
+  font-size: 24px;
+  color: rgb(var(--secondary));
+}
+.coordinate {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font:
+    9px ui-monospace,
+    monospace;
+  letter-spacing: 2px;
+  color: #747e90;
+}
+.heroFooter {
+  grid-column: 1 / -1;
+  border-bottom: 1px solid rgb(var(--border-1));
+  font-size: 11px;
+  color: rgb(var(--text-light));
+}
+.heroFooter a {
+  font:
+    9px ui-monospace,
+    monospace;
+  letter-spacing: 1.5px;
+}
+.heroFooter a span {
+  margin-left: 14px;
+  color: rgb(var(--secondary));
+}
+@media (max-width: 1023px) {
+  .orbitOne,
+  .orbitTwo {
+    width: 290px;
+    height: 190px;
+  }
+  .orbitThree {
+    width: 230px;
+    height: 230px;
+  }
+  .orbitLabel {
+    font-size: 8px;
+  }
+}
+@media (max-width: 767px) {
+  .heroTitle {
+    font-size: 80px;
+    letter-spacing: -5px;
+  }
+  .heroStatement {
+    font-size: 25px;
+  }
+  .orbitArt {
+    height: 330px;
+    max-width: 400px;
+    margin: 35px auto 0;
+  }
+  .orbitOne,
+  .orbitTwo {
+    width: 310px;
+    height: 200px;
+  }
+  .orbitThree {
+    width: 250px;
+    height: 250px;
+  }
+  .orbitLabel {
+    font-size: 9px;
+  }
+}
+@media (max-width: 380px) {
+  .heroTitle {
+    font-size: 70px;
+  }
+  .heroEyebrow {
+    font-size: 9px;
+  }
+  .orbitOne,
+  .orbitTwo {
+    width: 270px;
+  }
+  .primaryLink,
+  .secondaryLink {
+    gap: 14px;
+    padding-inline: 13px;
+  }
+}

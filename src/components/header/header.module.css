@@ -1,0 +1,25 @@
+.siteHeader {
+  border-bottom: 1px solid rgb(var(--border-1));
+}
+.monogram {
+  font-size: 32px;
+  letter-spacing: -3px;
+  font-weight: 700;
+}
+.monogram span {
+  color: rgb(var(--primary));
+}
+.navigation {
+  font-size: 13px;
+  color: #c8cbd4;
+}
+@media (max-width: 767px) {
+  .navigation {
+    font-size: 11px;
+  }
+}
+@media (max-width: 380px) {
+  .navigation {
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,33 @@
+.eyebrow {
+  font-family: ui-monospace, monospace;
+  letter-spacing: 1.7px;
+  font-size: 11px;
+  line-height: 1.7;
+  color: rgb(var(--text-light));
+}
+.sectionTitle {
+  font-size: clamp(30px, 3.2vw, 42px);
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+}
+.blue {
+  color: rgb(var(--secondary));
+}
+.purple {
+  color: rgb(var(--tertiary));
+}
+.orange {
+  color: rgb(var(--primary));
+}
+.sectionNote {
+  color: rgb(var(--text-light));
+}
+.dates {
+  font:
+    11px ui-monospace,
+    monospace;
+  color: rgb(var(--text-light));
+}
+.badge {
+  line-height: 1.6;
+}

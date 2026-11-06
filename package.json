@@ -1,44 +1,30 @@
 {
-  "name": "beat-sequencer",
-  "version": "0.0.0",
-  "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
-  },
+  "name": "jasper-stahmer-portfolio",
+  "version": "1.0.0",
   "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "start": "next dev",
+    "build": "next build",
+    "typecheck": "next typegen && tsc --noEmit",
+    "preview": "python3 -m http.server 3000 --directory out"
+  },
   "dependencies": {
-    "@angular/animations": "^17.0.0",
-    "@angular/common": "^17.0.0",
-    "@angular/compiler": "^17.0.0",
-    "@angular/core": "^17.0.0",
-    "@angular/forms": "^17.0.0",
-    "@angular/platform-browser": "^17.0.0",
-    "@angular/platform-browser-dynamic": "^17.0.0",
-    "@angular/router": "^17.0.0",
-    "components": "^0.1.0",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.14.2"
+    "@locus-ui/components": "^0.1.19",
+    "next": "^16.4.5",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^17.0.8",
-    "@angular/cli": "^17.0.8",
-    "@angular/compiler-cli": "^17.0.0",
-    "@types/jasmine": "~5.1.0",
-    "angular-cli-ghpages": "^0.6.2",
-    "autoprefixer": "^10.4.19",
-    "jasmine-core": "~5.1.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.2.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.1.0",
-    "ng-packagr": "^17.0.0",
-    "postcss": "^8.4.38",
-    "tailwindcss": "^3.4.3",
-    "typescript": "~5.2.2"
+    "@tailwindcss/postcss": "^4.3.5",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "postcss": "^8.5.32",
+    "tailwindcss": "^4.3.5",
+    "typescript": "^5.9.0"
+  },
+  "engines": {
+    "node": ">=20.9.0"
   }
 }

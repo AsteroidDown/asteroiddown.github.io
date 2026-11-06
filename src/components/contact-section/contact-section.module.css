@@ -1,0 +1,22 @@
+.contactSection h2 {
+  font-size: clamp(36px, 4.8vw, 60px);
+  line-height: 1.15;
+  letter-spacing: -2px;
+}
+.contactSection h2 span {
+  color: rgb(var(--secondary));
+}
+.contactDescription {
+  line-height: 1.8;
+  color: rgb(var(--text-light));
+}
+.contactLink {
+  border-bottom: 1px solid rgb(var(--border-1));
+}
+.contactLink > span {
+  color: rgb(var(--secondary));
+  font-size: 20px;
+}
+.contactDetail {
+  color: rgb(var(--text-light));
+}

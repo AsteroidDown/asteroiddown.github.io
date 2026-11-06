@@ -1,0 +1,17 @@
+.projectCard {
+  border: 1px solid rgb(var(--border-1));
+  background: rgb(var(--bg-2));
+}
+.projectCategory {
+  color: rgb(var(--text-light));
+  font:
+    9px ui-monospace,
+    monospace;
+  line-height: 1.6;
+}
+.projectDescription {
+  color: #b8bdc8;
+}
+.projectLinks {
+  border-top: 1px solid rgb(var(--border-1));
+}

@@ -1,0 +1,19 @@
+.educationPanel {
+  background: rgb(var(--bg-2));
+  border: 1px solid rgb(var(--border-1));
+  border-radius: 12px;
+}
+h3.degree {
+  font-size: 25px;
+  line-height: 1.4;
+  letter-spacing: -0.5px;
+}
+.educationDescription {
+  color: #b8bdc8;
+  line-height: 1.9;
+}
+@media (max-width: 767px) {
+  h3.degree {
+    font-size: 23px;
+  }
+}
