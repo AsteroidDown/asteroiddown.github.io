@@ -9,7 +9,14 @@
   * {
     box-sizing: border-box;
   }
+  html,
+  body {
+    background: #111317;
+  }
   html {
+    color-scheme: dark;
+    /* Keep decorative overflow from widening the mobile document. */
+    overflow-x: clip;
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
   }

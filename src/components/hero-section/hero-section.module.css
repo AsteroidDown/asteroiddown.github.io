@@ -39,6 +39,7 @@
 }
 .orbitArt {
   position: relative;
+  overflow: clip;
   height: 420px;
   width: 100%;
 }
